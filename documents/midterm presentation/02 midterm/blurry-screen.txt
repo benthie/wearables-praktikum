@@ -1,0 +1,8 @@
+Blurry Screen
+
+- working blur application for Mac OS X so far
+- written in Objective-C with Cocoa-API
+- makes use of the CoreGraphics framework to directly access low-level graphics interfaces
+- menubar-application without existence in system tray
+- interface to a second, platform independent application will control the blurring
+- a version for linux and/or windows will be developed if there is enough time
