@@ -7758,6 +7758,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <sheet>
 <plain>
 <text x="5.08" y="48.26" size="1.778" layer="95">VCNL 4020</text>
+<text x="58.42" y="76.2" size="1.778" layer="95">Flex Cable Pads</text>
 </plain>
 <instances>
 <instance part="C1" gate="G$1" x="-27.94" y="91.44"/>
@@ -7771,11 +7772,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="GND2" gate="1" x="-22.86" y="27.94"/>
 <instance part="U$1" gate="G$1" x="12.7" y="68.58"/>
 <instance part="GND3" gate="1" x="50.8" y="68.58"/>
-<instance part="GND" gate="G$1" x="76.2" y="101.6" rot="R270"/>
-<instance part="3V3" gate="G$1" x="76.2" y="96.52" rot="R270"/>
-<instance part="INT" gate="G$1" x="76.2" y="91.44" rot="R270"/>
-<instance part="SCL" gate="G$1" x="76.2" y="86.36" rot="R270"/>
-<instance part="SDA" gate="G$1" x="76.2" y="81.28" rot="R270"/>
+<instance part="GND" gate="G$1" x="76.2" y="96.52" rot="R270"/>
+<instance part="3V3" gate="G$1" x="76.2" y="101.6" rot="R270"/>
+<instance part="INT" gate="G$1" x="76.2" y="86.36" rot="R270"/>
+<instance part="SCL" gate="G$1" x="76.2" y="81.28" rot="R270"/>
+<instance part="SDA" gate="G$1" x="76.2" y="91.44" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -7807,8 +7808,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="50.8" y1="71.12" x2="30.48" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<label x="58.42" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="58.42" y1="101.6" x2="73.66" y2="101.6" width="0.1524" layer="91"/>
+<label x="58.42" y="96.52" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="96.52" x2="73.66" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND" gate="G$1" pin="PP"/>
 </segment>
 </net>
@@ -7834,8 +7835,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-27.94" y1="58.42" x2="-27.94" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<label x="58.42" y="96.52" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="58.42" y1="96.52" x2="73.66" y2="96.52" width="0.1524" layer="91"/>
+<label x="58.42" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="101.6" x2="73.66" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="3V3" gate="G$1" pin="PP"/>
 </segment>
 <segment>
@@ -7862,8 +7863,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="-27.94" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="73.66" y1="81.28" x2="58.42" y2="81.28" width="0.1524" layer="91"/>
-<label x="58.42" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="73.66" y1="91.44" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
+<label x="58.42" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="SDA" gate="G$1" pin="PP"/>
 </segment>
 </net>
@@ -7874,15 +7875,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="-27.94" y="66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<label x="58.42" y="86.36" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="58.42" y1="86.36" x2="73.66" y2="86.36" width="0.1524" layer="91"/>
+<label x="58.42" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="81.28" x2="73.66" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="SCL" gate="G$1" pin="PP"/>
 </segment>
 </net>
 <net name="INT" class="0">
 <segment>
-<label x="58.42" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="73.66" y1="91.44" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
+<label x="58.42" y="86.36" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="73.66" y1="86.36" x2="58.42" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="INT" gate="G$1" pin="PP"/>
 </segment>
 <segment>
