@@ -11,7 +11,7 @@ All the single bits and pieces of our project have been documented in order to d
 
 ###How to use
 
-So how to use our wearable? Simply get your glasses, grab the clips with the mounted electronics and a battery pack, which altogether forms the so called "<b>wearable<b>" and start the software on both the RFDuino and your Macintosh (sorry for that crucial restriction!).
+So how to use our wearable? Simply get your glasses, grab the clips with the mounted electronics and a battery pack, which altogether forms the so called "<b>wearable</b>" and start the software on both the RFDuino and your Macintosh (sorry for that crucial restriction!).
 
 
 Requirements
