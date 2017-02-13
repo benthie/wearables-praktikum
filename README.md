@@ -21,7 +21,7 @@ TODO
     <td style="border: 0 !important"><b>eyeDrops</b><br></td>
   </tr>
   <tr style="border: 0 !important">
-    <td>style="border: 0 !important"</td>
+    <td style="border: 0 !important"></td>
     <td style="border: 0 !important"><i>a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i></td>
   </tr >
 </table>
