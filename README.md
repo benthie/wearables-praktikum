@@ -16,7 +16,7 @@ In the context of the Embedded Systems Lab "Wearables", which started at the end
 - [Documentation](#documentation)
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
-- [eyeDrops Cocoa Application](#eyedrops-cocoaapplication)
+- [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
 - [Live Demo](#live-demo)
 
 ##Documentation
