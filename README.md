@@ -7,11 +7,11 @@ TODO
 
 # wearables-praktikum
 
-![Some Title](http://placehold.it/image.jpeg)
+vertical-align: middle;
 
 <div height="60">
 <img src="/docs/img/blur.png" width="60" height="60">
-<span style="vertical-align: middle;"><strong><b>eyeDrops</b></strong></span>
+<span style="margin-bottom: 20px"><strong><b>eyeDrops</b></strong></span>
 </div>
 <br>
 <i>a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i>
