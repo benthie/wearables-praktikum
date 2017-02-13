@@ -1,4 +1,5 @@
 TODO
+  - which license?
   - hardware nutzt sensor
   - icon copyrights
   - goals
@@ -22,9 +23,9 @@ In the context of the Embedded Systems Lab "Wearables", which started at the end
 
 ##Documentation
 
-Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of the electronics and the fixation parts (clips), to fix the electronics to different kind of spectacles. All documenting files should enable you to rebuild the hardware such that you have a working system which will out of the box communicate with the software.<br>
+Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of the electronics and the fixation parts - also called clips - to fix the electronics to different kind of spectacles. All documenting files should enable you to rebuild the hardware such that you have a working system which will out of the box communicate with the software.<br>
 <br>
-The developed software has been published under an open source license and is running as it is. It also consists of two parts, namly an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa App's source code has both copious commenting and a Doxygen documentation, which can be found [here (TODO)](docs/html/index.html). The application's graphical user interface will be explained [below](##eyeDrops Cocoa Application) and is additionally explained in a short video. [Link to the videos (TODO)](https://www.youtube.com/watch?v=wOwblaKmyVw).
+The developed software has been published under an open source license (TODO) and is running as it is. It also consists of two parts, namly an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a Doxygen documentation, which can be found [here (TODO)](docs/html/index.html). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the videos (TODO)](https://www.youtube.com/watch?v=wOwblaKmyVw).
 
 ###Requirements
 - Arduino IDE ([Arduino software](https://www.arduino.cc/en/main/software)) 
@@ -35,11 +36,11 @@ The developed software has been published under an open source license and is ru
 
 ###How to use
 
-So how to use our wearable? Simply grab the 3d-printed clips, mount the electronics together with a battery pack to it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is start the eyeDrops Application and have fun exploring.
+So how to use our wearable? Simply grab the 3d-printed clips, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is start the eyeDrops application and have fun exploring.
 
 ##eyeDrops Cocoa Application
 
-The eyeDrops Application is designed to offer a highly comfortable interface between the user and the wearable. Main task of the entire system is to detect a lack of blinking and then react correspondingly. The implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple but long overdue blink. And since the app only needs to control the screen, it was designed as a pure menubar application, that is there is no active window but just an icon in the menu bar.
+The eyeDrops application is designed to offer a highly comfortable interface between the user and the wearable. The main task of the entire system is to detect a lack of blinking and then react correspondingly. Our implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple, but long overdue blink. And since the app only needs to control the screen, it was designed as a pure menubar application, that is there is no active window but just an icon in the menu bar.
 
 ###Blur mode
 
