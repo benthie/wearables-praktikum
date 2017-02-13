@@ -109,6 +109,20 @@ Battery Level
 And with this mechanism working, we have a fucntioning system that also fullfills our initial goal.<br>
 <br>
 
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window.png" alt="calibration_window.png">
+<br>Figure 6: 
+</p>
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window2.png" alt="calibration_complete.png">
+<br>Figure 7: 
+</p>
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_complete.png" alt="calibration_complete2.png">
+<br>Figure 8: 
+</p>
 
 
 <br>
