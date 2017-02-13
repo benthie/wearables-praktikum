@@ -18,7 +18,7 @@ TODO
 <table style="margin-bottom: 0px">
   <tr style="border: 0 !important">
     <td style="border: 0 !important"><img src="/docs/img/blur.png" width="60" height="60"></td>
-    <tdstyle="border: 0 !important"><b>eyeDrops</b><br></td>
+    <td style="border: 0 !important"><b>eyeDrops</b><br></td>
   </tr>
   <tr style="border: 0 !important">
     <td>style="border: 0 !important"</td>
