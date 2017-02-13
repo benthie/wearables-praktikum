@@ -18,6 +18,7 @@ In the context of the Embedded Systems Lab "Wearables", which started at the end
 - [How to use](#how-to-use)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
 - [Live Demo](#live-demo)
+- [eyeDrops API](#/docs/api/index.html)
 
 ##Documentation
 
