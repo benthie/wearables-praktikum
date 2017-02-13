@@ -83,10 +83,10 @@ The system wide settings can be changed in the <i>General</i> tab in the Prefere
 </p>
 
 <b>Blurring settings</b>
-- <b>Maximal Blur Radius</b>: determines how strong your screen gets finally blurred
-- Blur Step: determines the step increase while blurring (the smaller the value, the smoother the blurring)
-- Blur Speed: determines the time delay between two steps (the smaller the value, the longer the blurring up to the maximal radius takes)
-- Allowed Time Without Blinking: the time interval in which at least one blink has to occur.
+- <b>Maximal Blur Radius:</b> determines how strong your screen gets finally blurred
+- <b>Blur Step:</b> determines the step increase while blurring (the smaller the value, the smoother the blurring)
+- <b>Blur Speed:</b> determines the time delay between two steps (the smaller the value, the longer the blurring up to the maximal radius takes)
+- <b>Allowed Time Without Blinking:</b> the time interval in which at least one blink has to occur.
 
 ###Calibration
 
