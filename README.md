@@ -6,9 +6,9 @@ TODO
   - gliederung
 
 # wearables-praktikum
-<table style="border:none">
+<table style="border-collapse:collapse">
   <tr>
-    <td><img src="/docs/img/blur.png" width="60" height="60"></td>
+    <td style="border:none; outline:none"><img src="/docs/img/blur.png" width="60" height="60"></td>
     <td><b>eyeDrops</b><br></td>
   </tr>
   <tr>
