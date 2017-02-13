@@ -121,7 +121,7 @@ The completion of the data acquisition will be announced by an pop-up alert with
 <br>Figure 8: Calibration window - After receiving and plotting the sensor and blink data.
 </p>
 
-A completed data acquisition phase can be seen in Figure 8. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top) until any noise lies between the threshold lines. A good guiding value is to set the thresholds to half of it's max value.
+A completed data acquisition phase can be seen in Figure 8. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top). A red and a blue line will appear for negative resprectively positive threshold. Place the lines such that any noise lies between the threshold values. A good guiding value is to set the thresholds to half of it's max value. After setting the threshold values the user can either do another calibration with the newly gained values and check if the algorithm now detects (more) blinks or directly save the profile with the option to directly use the new profile.<br>
 
 ##Live Demo
 
