@@ -87,7 +87,7 @@ The default directory the app is working in is `/Users/<CurrentUser>/eyeDrops` =
 The system wide settings can be changed in the <i>General</i> tab in the Preferences Window (see Figure 5). When starting the eyeDrops app for the first time, this settings will be initialized with values we used during the development phase. When properly closing the app, all made changes will be stored in `settings.txt` in the default directory and reloaded at the next launching process. That way your settings do not get lost.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_general2.png" alt="preferences_profiles.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_general.png" alt="preferences_profiles.png">
 <br>Figure 5: Preferences - General settings
 </p>
 
