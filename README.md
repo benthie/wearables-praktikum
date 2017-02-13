@@ -31,8 +31,7 @@ So how to use our wearable? Simply grab the 3d-printed clips, mount the electron
 
 The eyeDrops Application is designed to offer a highly comfortable interface between the user and the wearable. Main task of the entire system is to detect a lack of blinking and then react correspondingly. The implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple but long overdue blink. And since the app only needs to control the screen, it was designed as a pure menubar application, that is there is no active window but just an icon in the menu bar.
 
-[comment]: <> <center>![alt tag](docs/img/menu_item_off.png)</center>
-[comment]: <div style="text-align:center"><img src ="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_off.png" /></div>
+[comment]: my first comment
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_off.png" alt="menu_item_off.png">
