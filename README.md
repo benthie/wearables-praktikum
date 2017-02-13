@@ -4,17 +4,26 @@ TODO
   - goals
   - icon does not change when menubar is not black
   - gliederung
+  
+  /* borderless table */
+.table.table-borderless td, .table.table-borderless th {
+    border: 0 !important;
+}
+
+.table.table-borderless {
+    margin-bottom: 0px;
+}
 
 # wearables-praktikum
-<table style="border-collapse:collapse">
-  <tr>
-    <td style="border:none; outline:none"><img src="/docs/img/blur.png" width="60" height="60"></td>
-    <td><b>eyeDrops</b><br></td>
+<table style="margin-bottom: 0px">
+  <tr style="border: 0 !important">
+    <td style="border: 0 !important"><img src="/docs/img/blur.png" width="60" height="60"></td>
+    <tdstyle="border: 0 !important"><b>eyeDrops</b><br></td>
   </tr>
-  <tr>
-    <td></td>
-    <td><i>a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i></td>
-  </tr>
+  <tr style="border: 0 !important">
+    <td>style="border: 0 !important"</td>
+    <td style="border: 0 !important"><i>a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i></td>
+  </tr >
 </table>
 
 
