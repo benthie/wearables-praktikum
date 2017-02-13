@@ -10,7 +10,7 @@ Now - at the end of the project - we proudly present our results. All the single
 The developed software has been published under an open source license (TODO) and is running as it is. It consists of two parts, namly an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a Doxygen documentation, which can be found [here (TODO)](docs/html/index.html). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the videos (TODO)](https://www.youtube.com/watch?v=wOwblaKmyVw).
 
 
-##Contents
+##Table of contents
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
