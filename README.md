@@ -9,7 +9,7 @@ TODO
 
 ![Some Title](http://placehold.it/image.jpeg)
 
-<img src="/docs/img/blur.png" width="60" height="60">{:style="float: left;margin-left: 7px;margin-top: 7px;"}
+<img src="/docs/img/blur.png" width="60" height="60" style="float: left;margin-left: 7px;margin-top: 7px;">
 <b>eyeDrops</b><br>
 <i>a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i>
 
