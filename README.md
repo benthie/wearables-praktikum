@@ -4,33 +4,14 @@ TODO
   - goals
   - icon does not change when menubar is not black
   - gliederung
-  
-  /* borderless table */
-.table.table-borderless td, .table.table-borderless th {
-    border: 0 !important;
-}
-
-.table.table-borderless {
-    margin-bottom: 0px;
-}
 
 # wearables-praktikum
 
-![Some Title](http://placehold.it/image.jpeg){:style="float: right;margin-right: 7px;margin-top: 7px;"}
+![Some Title](http://placehold.it/image.jpeg)
 
-
-
-<table style="margin-bottom: 0px; border-collapse:collapse">
-  <tr style="border: 0 !important">
-    <td style="border: 0 !important"><img src="/docs/img/blur.png" width="60" height="60"></td>
-    <td style="border: 0 !important"><b>eyeDrops</b><br></td>
-  </tr>
-  <tr style="border: 0 !important">
-    <td style="border: 0 !important"></td>
-    <td style="border: 0 !important"><i>a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i></td>
-  </tr >
-</table>
-
+<img src="/docs/img/blur.png" width="60" height="60">{:style="float: left;margin-left: 7px;margin-top: 7px;"}
+<b>eyeDrops</b><br>
+<i>a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i>
 
 In the context of the Embedded Systems Lab "Wearables", which started at the end of Oct 2016, we were asked to build our own wearable device. Our idea since then is to build a blink detection system that recognizes the user's lack of blinking when e.g. sitting in front of the computer. With a custom-built software the user of our wearable will be stimulated to blink without even noticing that he has been doing so (as far as the theory is concerned).
 
