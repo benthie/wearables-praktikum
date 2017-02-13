@@ -12,6 +12,13 @@ TODO
 <br>
 In the context of the Embedded Systems Lab "Wearables", which started at the end of Oct 2016, we were asked to build our own wearable device. Our idea since then is to build a blink detection system that recognizes the user's lack of blinking when e.g. sitting in front of the computer. With a custom-built software the user of our wearable will be stimulated to blink without even noticing that he has been doing so (as far as the theory is concerned).
 
+##Contents
+- [Documentation](#documentation)
+- [Requirements](#requirements)
+- [How to use](#how-to-use)
+- [eyeDrops Cocoa Application](#eyedrops-cocoaapplication)
+- [Live Demo](#live-demo)
+
 ##Documentation
 
 Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of the electronics and the fixation parts (clips), to fix the electronics to different kind of spectacles. All documenting files should enable you to rebuild the hardware such that you have a working system which will out of the box communicate with the software.<br>
@@ -22,6 +29,7 @@ The developed software has been published under an open source license and is ru
 - Arduino IDE ([Arduino software](https://www.arduino.cc/en/main/software)) 
 - RFDuino Package ([Link to the Git](https://github.com/RFduino/RFduino/blob/master/README.md))
 - Mac OS X (sorry for that crucial restriction!)
+- Bluetooth Low Energy (BLE - also called Bluetooth 4.0) capable Mac
 - RFDuino USB Shield ([RFD22121](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html) or [RFD22124](http://www.rfduino.com/product/rfd22124-pcb-usb-shield-for-rfduino/index.html))
 
 ###How to use
@@ -107,6 +115,7 @@ And with this mechanism working, we have a fucntioning system that also fullfill
 (Our initial goal, to be able to force the user to blink without him being aware that he did so, has not yet been verified.)<br>
 <br>
 
+##Live Demo
 
 
 
