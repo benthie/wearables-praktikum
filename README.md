@@ -82,17 +82,17 @@ The system wide settings can be changed in the <i>General</i> tab in the Prefere
 <br>Figure 5: Preferences - General settings
 </p>
 
-<b>Blurring settings</b>
+Blurring settings
 - <b>Maximal Blur Radius:</b> determines how strong your screen gets finally blurred
 - <b>Blur Step:</b> determines the step increase while blurring (the smaller the value, the smoother the blurring)
 - <b>Blur Speed:</b> determines the time delay between two steps (the smaller the value, the longer the blurring up to the maximal radius takes)
 - <b>Allowed Time Without Blinking:</b> the time interval in which at least one blink has to occur.
 
-<b>Bluetooth settings</b>
+Bluetooth settings
 - <b>Automatically scan:</b> determines whether the app automatically scans for devices
 - <b>Automatically connect:</b> determines whether the app automatically connects to the last known device
 
-<b>Battery Level</b>
+Battery Level
 - This LevelIndicator shows the battery level of the wearable. The indication here is not really proportional to the battery voltage but to the voltage after the voltage regulator in the PCB. For more information about this see the [report TODO](/docs/report.pdf).
 
 ###Calibration
