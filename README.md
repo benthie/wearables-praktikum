@@ -46,27 +46,27 @@ The eyeDrops application is designed to offer a highly comfortable interface bet
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_off.png" alt="menu_item_off.png">
-<br>Figure 1: Application in off state
+<br>Figure 1: Application in off state.
 </p>
 
-As you can see there is no active window but only a menubar icon which pops down a usual menu when you click on it. In the above image the icon is gray and not white, telling the user that blur mode is turned off.
+As you can see in Figure 1, there is no active window but only a menubar icon which pops down a usual menu when you click on it. In the above image the icon is gray and not white, telling the user that blur mode is turned off.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_on.png" alt="menu_item_on.png">
-<br>Figure 2: Application in on state
+<br>Figure 2: Application in on state.
 </p>
 
-This time the icon is white and thus signalizing that blur mode is activated. To switch bewteen those two states simply <b>ctrl-click</b> on the menubar item. If blur mode is actived and in case that a device is connected, the screen would be blurred if the user did not blink in adjustable time interval. See the [settings](#Preferences) section for more information about the allowed time interval without an eye blink.
+In Figure 2, however, the icon is white and thus signalizing that blur mode is activated. To switch bewteen those two states simply <b>ctrl-click</b> on the menubar item. If blur mode is actived and in case that a device is connected, the screen would be blurred if the user did not blink in adjustable time interval. See the [settings](#preferences) section for more information about the allowed time interval without an eye blink.
 
 ###Establishing Bluetooth (LE) Connection
 
-In order to establish a bluetooth connection with the wearable, which is the next necessary and logical step when setting up the system, the first thing to do is scanning for bluetooth nearby. This can be either done via the menuitem <i>Scan for devices</i> or automatically by the app. The latter way needs a setting in the <i>General</i> tab in the [Preferences Window](#Preferences).<br>
+In order to establish a bluetooth connection with the wearable, which is the next necessary and logical step when setting up the system, the first thing to do is scanning for bluetooth nearby. This can be either done via the menuitem <i>Scan for devices</i> or automatically by the app. The latter way needs a setting in the <i>General</i> tab in the [Preferences Window](#preferences).<br>
 <br>
-After a successful scan all the available devices are listed in the submenu <i>Available Devices</i>. Connecting to the device can again be done either via selecting the corresponding menuitem or automatically by the app. The second way needs a setting in the <i>General</i> tab in the [Preferences Window](#Preferences).<br>
+After a successful scan all the available devices are listed in the submenu <i>Available Devices</i>. Connecting to the device can again be done either via selecting the corresponding menuitem or automatically by the app. The second way needs a setting in the <i>General</i> tab in the [Preferences Window](#preferences).<br>
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_devices.png" alt="menu_devices.png">
-<br>Figure 3: List of available devices
+<br>Figure 3: List of available devices.
 </p>
 
 A connected device is represented with a check mark next to its name. Another click on that same menuitem would then cancel the connection with the device. Selecting another device which is currently not the connected one would simply switch the connection to that device.<br>
@@ -75,14 +75,14 @@ In case that a connection was successfully established, the wearable now needs a
 
 ###User profiles / Profile manager
 
-In order to obtain a valid user profile either load an XML file containing one or more valid profiles or use the systems [calibration](#Calibration) procedure to create a new profile.
+In order to obtain a valid user profile either load an XML file containing one or more valid profiles or use the systems [calibration](#calibration) procedure to create a new profile.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_profiles2.png" alt="preferences_profiles.png">
-<br>Figure 4: Preferences - User profile manager
+<br>Figure 4: Preferences - User profile manager.
 </p>
 
-The default directory the app is working in is `/Users/<CurrentUser>/eyeDrops` = `~/eyeDrops`, where `<CurrentUser>` is the name of the currently logged in user. This directory is created during the app's launching process and will of course not be overwritten if it already exists. You can put your XML file in this directory and restart the app, which will lead to an automatic reading of the profiles contained in XML file, or you click <i>Browse</i> in the <i>Profiles</i> tab in the Preferences Window (see Figure 4) and manually select your XML file there. After setting the new path, the profiles will be automatically read from the file and displayed in the TableView in the profile manager. Selecting a profile from that table will display the user profile's content in the TextView next to the table. It is also possible to delete a profile by clicking <i>Delete profile</i> or to create a new profile by clicking <i>Create new profile</i>, which will then open up the [calibration window](#Calibration).
+The default directory the app is working in is `/Users/<CurrentUser>/eyeDrops` = `~/eyeDrops`, where `<CurrentUser>` is the name of the currently logged in user. This directory is created during the app's launching process and will of course not be overwritten if it already exists. You can put your XML file in this directory and restart the app, which will lead to an automatic reading of the profiles contained in XML file, or you click <i>Browse</i> in the <i>Profiles</i> tab in the Preferences Window (see Figure 4) and manually select your XML file there. After setting the new path, the profiles will be automatically read from the file and displayed in the TableView in the profile manager. Selecting a profile from that table will display the user profile's content in the TextView next to the table. It is also possible to delete a profile by clicking <i>Delete profile</i> or to create a new profile by clicking <i>Create new profile</i>, which will then open up the [calibration window](#calibration).
 
 ###Preferences
 
@@ -90,7 +90,7 @@ The system wide settings can be changed in the <i>General</i> tab in the Prefere
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_general.png" alt="preferences_profiles.png">
-<br>Figure 5: Preferences - General settings
+<br>Figure 5: Preferences - General settings.
 </p>
 
 Blurring settings
@@ -108,24 +108,30 @@ Battery Level
 
 ###Calibration
 
-And with this mechanism working, we have a fucntioning system that also fullfills our initial goal.<br>
-<br>
+As explained above, calibration is essential for having a properly working blink detection algorithm. Since every eye is unique, differing shapes, sizes and positions in the skull are what the sensor is facing. And due to those inequalities the measured distances to the eye vary from one user to the other. The implemented calibration procedure let's the user define his or her individual calibration parameters, which are then uploaded to the wearable as well as stored in a profile on the computer. More information about the calibration and the different parameters used to detect a blink is elaborately decribed in the [final report (TODO)](/docs/report.pdf).
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window.png" alt="calibration_window.png">
-<br>Figure 6: 
+<br>Figure 6: Calibration window - On start-up.
 </p>
+
+Figure 6 shows the calibration window directly after start-up. Both eyeDrops app and wearable are now in calibration mode  where the RFDuino can be triggered to continuously send data packages containing sensor raw data and information about whether a blink was detected or not until a stop message arrives.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window2.png" alt="calibration_complete.png">
-<br>Figure 7: 
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/animation.png" alt="animation.png">
+<br>Figure 7: Calibration window - On start-up.
 </p>
+
+A custom-built animation (see Figure 7) is used to guide the user through the data acquisition phase of the calibration. This phase takes nine seconds and should contain four blinks (represented by the larger circles). It can be run testwise without receiving any data just to get to know the procedure by clicking the button <i>Run Test</i>.<br>
+<br>
+The completion of the data acquisition will be announced by an pop-up alert with instructions for the next steps. Afterwards the data will be plotted in the two designated graphs.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_complete.png" alt="calibration_complete2.png">
-<br>Figure 8: 
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window2.png" alt="calibration_window2.png">
+<br>Figure 8: Calibration window - After receiving and plotting the sensor and blink data.
 </p>
 
+A completed data acquisition phase can be seen in Figure 8. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top) until any noise lies between the threshold lines. A good guiding value is to set the thresholds to half of it's max value.
 
 <br>
 (Our initial goal, to be able to force the user to blink without him being aware that he did so, has not yet been verified.)<br>
