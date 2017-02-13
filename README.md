@@ -67,7 +67,7 @@ In case that a connection was successfully established, the wearable now needs a
 In order to obtain a valid user profile either load an XML file containing one or more valid profiles or use the systems [calibration](#Calibration) procedure to create a new profile.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_profiles.png" alt="preferences_profiles.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_profiles2.png" alt="preferences_profiles.png">
 <br>Figure 4: Preferences - User profile manager
 </p>
 
