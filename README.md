@@ -15,7 +15,12 @@ TODO
 }
 
 # wearables-praktikum
-<table style="margin-bottom: 0px">
+
+![Some Title](http://placehold.it/image.jpeg){:style="float: right;margin-right: 7px;margin-top: 7px;"}
+
+
+
+<table style="margin-bottom: 0px; border-collapse:collapse">
   <tr style="border: 0 !important">
     <td style="border: 0 !important"><img src="/docs/img/blur.png" width="60" height="60"></td>
     <td style="border: 0 !important"><b>eyeDrops</b><br></td>
