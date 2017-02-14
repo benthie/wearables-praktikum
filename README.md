@@ -149,10 +149,10 @@ If you do not want to always launch the application out of XCode, you can use an
 ##Credits
 
 <b>The Noun Project - Source for the used items:</b>
-- Rohit M S: Creator of the application icon
-- Nicolas Morand: Creator of the profiles icon
-- Guilhem: Creator of the battery icon
-- Viktor Vorobyev: Creator of the bluetooth icon
+- <i>Rohit M S:</i> Creator of the application icon
+- <i>Nicolas Morand:</i> Creator of the profiles icon
+- <i>Guilhem:</i> Creator of the battery icon
+- <i>Viktor Vorobyev:</i> Creator of the bluetooth icon
 
 ##License
 
@@ -162,5 +162,3 @@ TODO
   - hardware nutzt sensor
   - goals
   - icon does not change when menubar is not black
-  - gliederung
-  - install instructions (copy frameworks to /System/Library/)
