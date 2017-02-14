@@ -14,8 +14,10 @@ The developed software has been published under an open source license (TODO) an
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
+  - [Blur mode](#blur-mode)
 - [Live Demo](#live-demo)
-- [eyeDrops API](#/docs/api/index.html)
+- [Credits](#credits)
+- [License](#license)
 
 ###Requirements
 - Arduino IDE ([Arduino software](https://www.arduino.cc/en/main/software)) 
