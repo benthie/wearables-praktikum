@@ -16,11 +16,11 @@ The developed software has been published under an open source license (TODO) an
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
   - [Blur mode](#blur-mode)
   - [Bluetooth connection](#establishing-bluetooth-le-connection)
-  - [User profile manager]()
-  - [Preferences]()
-  - [Calibration]()
-  - [Ready to use]()
-  - [Executable File]()
+  - [User profile manager](#user-profile-manager)
+  - [Preferences](#preferences)
+  - [Calibration](#calibration)
+  - [Ready to use](#ready-to-use)
+  - [Executable File](#executable-file)
 - [Live Demo](#live-demo)
 - [Credits](#credits)
 - [License](#license)
@@ -76,7 +76,7 @@ A connected device is represented with a check mark next to its name. Another cl
 <br>
 In case that a connection was successfully established, the wearable now needs a user profile to work with. This user profile contains the paramerters used by the blink detection algorithm. Without a valid user the wearable will be idle.
 
-##User profiles / Profile manager
+##User profiles / Profile manager<a name="user-profile-manager" />
 
 In order to obtain a valid user profile either load an XML file containing one or more valid profiles or use the systems [calibration](#calibration) procedure to create a new profile.
 
@@ -140,7 +140,7 @@ A completed data acquisition phase can be seen in Figure 8. The preset values on
 
 Now that a valid profile has been created and uploaded to the wearable, the system is ready to use. Enable the [blur mode](#blur-mode) and enjoy the experience with the system.
 
-###Using the Cocoa executable (.app file)
+###Using the Cocoa executable (.app file)<a name="executable-file" />
 
 If you do not want to always launch the application out of XCode, you can use an executable .app file. After running the app out of XCode, an .app file has been automatically created there. In your project navigator in XCode you can find it in the `Products` folder. Right-click on `eyeDrops.app` and select `Show in Finder`. The opened folder contains the app as well as two frameworks. Those frameworks must be copied into `/System/Library/Frameworks` to make the `eyeDrops.app` launchable.
 
