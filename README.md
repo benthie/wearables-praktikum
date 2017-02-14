@@ -15,6 +15,12 @@ The developed software has been published under an open source license (TODO) an
 - [How to use](#how-to-use)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
   - [Blur mode](#blur-mode)
+  - [Bluetooth connection](#establishing-bluetooth-le-connection)
+  - [User profile manager]()
+  - [Preferences]()
+  - [Calibration]()
+  - [Ready to use]()
+  - [Executable File]()
 - [Live Demo](#live-demo)
 - [Credits](#credits)
 - [License](#license)
@@ -55,7 +61,7 @@ As you can see in Figure 1, there is no active window but only a menubar icon wh
 
 In Figure 2, however, the icon is white and thus signalizing that blur mode is activated. To switch bewteen those two states simply <b>ctrl-click</b> on the menubar item. If blur mode is actived and in case that a device is connected, the screen would be blurred if the user did not blink in adjustable time interval. See the [settings](#preferences) section for more information about the allowed time interval without an eye blink.
 
-##Establishing Bluetooth (LE) Connection
+##Establishing Bluetooth (LE) Connection<a name="establishing-bluetooth-le-connection" />
 
 In order to establish a bluetooth connection with the wearable, which is the next necessary and logical step when setting up the system, the first thing to do is scanning for bluetooth nearby. This can be either done via the menuitem <i>Scan for devices</i> or automatically by the app. The latter way needs a setting in the <i>General</i> tab in the [Preferences Window](#preferences).<br>
 <br>
