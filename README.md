@@ -23,14 +23,19 @@ The developed software has been published under an open source license (TODO) an
 - Mac OS X (sorry for that crucial restriction!)
 - Bluetooth Low Energy (BLE - also called Bluetooth 4.0) capable Mac
 - RFDuino USB Shield ([RFD22121](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html) or [RFD22124](http://www.rfduino.com/product/rfd22124-pcb-usb-shield-for-rfduino/index.html))
+- CorePlot Framework ([Installation Guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application))
 
 ###How to use
 
-So how to use our wearable? Simply grab the 3d-printed clips, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is start the eyeDrops application and have fun exploring.
+So how to use our wearable? Simply grab the 3d-printed clips, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
+<br>
+<i>Note:</i> If you want to use the compiled and built application (.app file) please follow the steps described here (TODO).
 
 #eyeDrops Cocoa Application
 
-The eyeDrops application is designed to offer a highly comfortable interface between the user and the wearable. The main task of the entire system is to detect a lack of blinking and then react correspondingly. Our implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple, but long overdue blink. And since the app only needs to control the screen, it was designed as a pure menubar application, that is there is no active window but just an icon in the menu bar.
+The eyeDrops application is designed to offer a highly comfortable interface between the user and the wearable. The main task of the entire system is to detect a lack of blinking and then react correspondingly. Our implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple blink, which was apparently long overdue. And since the app only needs to control the screen, it was designed as a pure menubar application, that is having no active window but just an icon in the menu bar.<br>
+<br>
+To get it running ownload the source code from the (TODO) [software folder](/software) and launch `eyeDrops.xcodeproj` with XCode. Make sure you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
 
 ##Blur mode
 
@@ -123,6 +128,14 @@ The completion of the data acquisition will be announced by an pop-up alert with
 
 A completed data acquisition phase can be seen in Figure 8. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top). A red and a blue line will appear for negative resprectively positive threshold. Place the lines such that any noise lies between the threshold values. A good guiding value is to set the thresholds to half of it's max value. After setting the threshold values the user can either do another calibration with the newly gained values and check if the algorithm now detects (more) blinks or directly save the profile with the option to directly use the new profile.<br>
 
+###Ready to use
+
+Now that a valid profile has been created and uploaded to the wearable, the system is ready to use. Enable the [blur mode](#blur-mode) and enjoy the experience with the system.
+
+###Using the Cocoa executable (.app file)
+
+If you do not want to always launch the application out of XCode, you can use an executable .app file. After running the app out of XCode, an .app file has been automatically created there. In your project navigator in XCode you can find it in the `Products` folder. Right-click on `eyeDrops.app` and select `Show in Finder`. The opened folder contains the app as well as two frameworks. Those frameworks must be copied into `/System/Library/Frameworks` to make the `eyeDrops.app` launchable.
+
 ##Live Demo
 
 ##Credits
@@ -136,6 +149,7 @@ A completed data acquisition phase can be seen in Figure 8. The preset values on
 ##License
 
 TODO
+  - Tooltip
   - which license?
   - hardware nutzt sensor
   - goals
