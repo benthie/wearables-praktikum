@@ -157,6 +157,7 @@ If you do not want to always launch the application out of XCode, you can use an
 ##License
 
 TODO
+  - warum mac
   - Tooltip
   - which license?
   - hardware nutzt sensor
