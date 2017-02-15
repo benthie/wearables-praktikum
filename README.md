@@ -1,3 +1,7 @@
+<b>Bugfixes<b><br>
+- blur stop invokes another blurring
+- two devices around
+
 <img src="/docs/img/eyeDrops_logo.png" height="60"><br>
 <i>     a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i><br>
 <br>
