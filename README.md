@@ -1,4 +1,4 @@
-<b>Bugfixes<b><br>
+<b>Bugfixes</b><br>
 - blur stop invokes another blurring
 - two devices around
 
