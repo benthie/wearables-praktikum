@@ -49,6 +49,8 @@ So how to use our wearable? Simply grab the 3d-printed clips and the fitting sli
 
 #Hardware
 
+Our Hardware consits mainly of three parts: The sensor that is detecting the blinks, the microcontroller RFDuino and our 3D-printed parts, used to hold the sensor and microcontroller in place.
+
 ##VCNL4020
 
 <p align="center">
@@ -58,8 +60,46 @@ So how to use our wearable? Simply grab the 3d-printed clips and the fitting sli
 
 The sensor used in our wearable is the VCNL4020 (http://www.vishay.com/docs/83476/vcnl4020.pdf). It is a proximity and ambient light sensor with a built-in infrared emitter and photo diode. The data obtained from the sensor vary, depending on how much light is reflected back to the sensor. Due to its high 16-bit-resolution and the operating range from 1 to 200 mm, it is possible to determine the difference of distance when pointing at an open or a closed eyelid. The data of the VCNL4020 can be transferred via an I²C Interface. Furthermore, interrupts can be sent. <br>
 <br>
-A custom PCB was designed for the VCNL4020. The goal was to get a board that can be attached to a clip, mounted in the front of spectacles, worn by the user. In order to not disturb the user while working, the PCB should be as small as possible. The first design featured pull-up resistors for the data, clock and interrupt signals, decoupling capacitors and five header pins for power supply, the I²C interface and the interrupt signal. However, the first PCB design had to be revised due to its size, by moving the pull-up resistors to the second PCB. The revised PCB features a size of only 11 mm times 12 mm. The schematics and layouts of both versions  can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
+A custom PCB was designed for the VCNL4020. The goal was to get a board that can be attached to a clip, mounted in the front of spectacles, worn by the user. In order to not disturb the user while working, the PCB should be as small as possible. The first design featured pull-up resistors for the data, clock and interrupt signals, decoupling capacitors and five header pins for power supply, the I²C interface and the interrupt signal. 
 
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png">
+<br>Figure 1: First PCB design for VCNL4020.
+</p>
+
+However, the first PCB design had to be revised due to its size, by moving the pull-up resistors to the second PCB and using small pads instead of the header pins. The revised PCB features a size of only 11 mm times 12 mm. The schematics and layouts of both versions  can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
+
+The revised PCB was milled, using a Cirqoid CNC mill (http://cirqoid.com/). Both the milled PCB without components and the populated PCB can be seen here:
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL.png" alt="PCB-VCNL.png">
+<br>Figure 1: milled PCB for VCNL4020.
+</p>
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.png" alt="sensorboard_populated.png">
+<br>Figure 1: populated PCB for VCNL4020.
+</p>
+
+A ribbon cable was attached to the pads, so that the PCB for the VCNL can be connected to the RFDuino PCB, which will be described in the following chapter.
+
+##RFDuino
+
+The microcontroller used in our project is an RFduino (http://www.rfduino.com/) which features a bluetooth low energy (BLE) compatible radio transceiver. It can be programmed using the Arduino IDE.
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png">
+<br>Figure 1: RFduino
+</p>
+
+A custom PCB was made for the RFduino, featuring a 3.3 V voltage regulator, decoupling capacitors, a reset button, the mentioned pull-up resistors for the VCNL4020, header pins to connect to the ribbon cable leading to the VCNL4020 PCB, header pins for programming the RFduino and a screw terminal for the input voltage. The populated PCB can be seen here:
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino_board.png" alt="RFDuino_board.png">
+<br>Figure 1: PCB for RFduino 
+</p>
+
+The schematic and layout of the PCB can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
 
 #eyeDrops Cocoa Application
 
