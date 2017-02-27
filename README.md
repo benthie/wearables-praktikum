@@ -113,28 +113,28 @@ The 3D-printed parts include a clip and slider for the VCNL4020 PCB, a clip for 
 Since our product shall be usable with the users own spectacles, both clips were designed in three different sizes, so that they can be attached to temple arms of different widths. The clip for the VCNL4020 was made as small as possible and printed with transparent filament, in order to reduce the impact in the visual field of the user.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-7.png" alt="Clip-7.png" width=400>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-7.PNG" alt="Clip-7.png" width=400>
 <br>Figure 2: Clip for VCNL4020 PCB
 </p>
 
 Due to different anatomies of different users, like smaller or bigger eyes, eyeballs located further in- or outside the head, etc., it should be possible to adjust the position of the VCNL4020 PCB. Therefore, the PCB is not directly attached to the clip, but instead attached to a slider, which is itself slided into the clip. 
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3.png" alt="Slider-3.png" width=400>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3.PNG" alt="Slider-3.png" width=400>
 <br>Figure 2: Slider for VCNL4020 PCB
 </p>
 
 The slider was designed with different inclinations, so that the angle between the temple arms and the PCB can be adjusted. There are also sliders that lower the position of the PCB with respect to the height of the temple arms. These exchangable sliders allow adjustment to different anatomies.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3-lower.png" alt="Slider-3-lower.png" width=400>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3-lower.PNG" alt="Slider-3-lower.png" width=400>
 <br>Figure 2: lower Slider for VCNL4020 PCB
 </p>
 
 In order to attach the RFduino PCB to the users spectacles, there is another clip. This clip is used without a slider. Instead the PCB is directly attached to the clip, held by two tappets. There is a cavity in the clip, so that the reset button of the PCB can be pressed easily.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-RFDuino-Board-7.png" alt="Clip-RFDuino-Board-7.png" width=400>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-RFDuino-Board-7.PNG" alt="Clip-RFDuino-Board-7.PNG" width=400>
 <br>Figure 2: Clip for RFduino PCB
 </p>
 
