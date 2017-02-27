@@ -17,6 +17,10 @@ The developed software has been published under an open source license (TODO) an
 ##Table of contents
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
+- [Hardware](#hardware)
+  - [VCNL4020](#vcnl-4020)
+  - [RFDuino](#rfduino)
+  - [3D-printed parts](#3d-printed-parts)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
   - [Blur mode](#blur-mode)
   - [Bluetooth connection](#establishing-bluetooth-le-connection)
@@ -46,6 +50,11 @@ So how to use our wearable? Simply grab the 3d-printed clips and the fitting sli
 #Hardware
 
 ##VCNL4020
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/VCNL4020.png" alt="VCNL4020.png">
+<br>Figure 1: Sensor VCNL4020.
+</p>
 
 The sensor used in our wearable is the VCNL4020 (http://www.vishay.com/docs/83476/vcnl4020.pdf). It is a proximity and ambient light sensor with a built-in infrared emitter and photo diode. The data obtained from the sensor vary, depending on how much light is reflected back to the sensor. Due to its high 16-bit-resolution and the operating range from 1 to 200 mm, it is possible to determine the difference of distance when pointing at an open or a closed eyelid. The data of the VCNL4020 can be transferred via an I²C Interface. Furthermore, interrupts can be sent. <br>
 <br>
