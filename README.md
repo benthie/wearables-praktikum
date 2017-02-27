@@ -63,7 +63,7 @@ The sensor used in our wearable is the VCNL4020 (http://www.vishay.com/docs/8347
 A custom PCB was designed for the VCNL4020. The goal was to get a board that can be attached to a clip, mounted in the front of spectacles, worn by the user. In order to not disturb the user while working, the PCB should be as small as possible. The first design featured pull-up resistors for the data, clock and interrupt signals, decoupling capacitors and five header pins for power supply, the I²C interface and the interrupt signal. 
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png" width="300">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png" width="400">
 <br>Figure 2: First PCB design for VCNL4020.
 </p>
 
@@ -72,12 +72,12 @@ However, the first PCB design had to be revised due to its size, by moving the p
 The revised PCB was milled, using a Cirqoid CNC mill (http://cirqoid.com/). Both the milled PCB without components and the populated PCB can be seen here:
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.jpg" alt="PCB-VNCL.jpg" width=300>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.jpg" alt="PCB-VNCL.jpg" width=200>
 <br>Figure 3: milled PCB for VCNL4020.
 </p>
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.jpg" alt="sensorboard_populated.jpg" width=300>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.jpg" alt="sensorboard_populated.jpg" width=200>
 <br>Figure 4: populated PCB for VCNL4020.
 </p>
 
