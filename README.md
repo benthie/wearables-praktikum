@@ -1,7 +1,3 @@
-<b>Bugfixes</b><br>
-- blur stop invokes another blurring
-- two devices around
-
 <img src="/docs/img/eyeDrops_logo.png" height="60"><br>
 <i>     a project by Marlene Fiedler, Lorenz Miething and Benjamin Thiemann</i><br>
 <br>
@@ -268,10 +264,9 @@ If you do not want to always launch the application out of XCode, you can use an
 
 ##License
 
+This project has been published under the MIT License. 
+
 TODO
   - warum mac
   - Tooltip
-  - which license?
-  - hardware nutzt sensor
-  - goals
   - icon does not change when menubar is not black
