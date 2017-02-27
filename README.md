@@ -64,7 +64,7 @@ A custom PCB was designed for the VCNL4020. The goal was to get a board that can
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png" width="300">
-<br>Figure 1: First PCB design for VCNL4020.
+<br>Figure 2: First PCB design for VCNL4020.
 </p>
 
 However, the first PCB design had to be revised due to its size, by moving the pull-up resistors to the second PCB and using small pads instead of the header pins. The revised PCB features a size of only 11 mm times 12 mm. The schematics and layouts of both versions  can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
@@ -73,12 +73,12 @@ The revised PCB was milled, using a Cirqoid CNC mill (http://cirqoid.com/). Both
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.jpg" alt="PCB-VNCL.jpg" width=300>
-<br>Figure 1: milled PCB for VCNL4020.
+<br>Figure 3: milled PCB for VCNL4020.
 </p>
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.jpg" alt="sensorboard_populated.jpg" width=300>
-<br>Figure 1: populated PCB for VCNL4020.
+<br>Figure 4: populated PCB for VCNL4020.
 </p>
 
 A ribbon cable was attached to the pads, so that the PCB for the VCNL can be connected to the RFDuino PCB, which will be described in the following chapter.
@@ -89,14 +89,14 @@ The microcontroller used in our project is an RFduino (http://www.rfduino.com/) 
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png" width=400>
-<br>Figure 1: RFduino
+<br>Figure 5: RFduino
 </p>
 
 A custom PCB was made for the RFduino, featuring a 3.3 V voltage regulator, decoupling capacitors, a reset button, the mentioned pull-up resistors for the VCNL4020, header pins to connect to the ribbon cable leading to the VCNL4020 PCB, header pins for programming the RFduino and a screw terminal for the input voltage. The populated PCB can be seen here:
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFduino_board.jpg" alt="RFduino_board.jpg" width=400>
-<br>Figure 1: PCB for RFduino 
+<br>Figure 6: PCB for RFduino 
 </p>
 
 The schematic and layout of the PCB can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
@@ -107,36 +107,45 @@ The 3D-printed parts include a clip and slider for the VCNL4020 PCB, a clip for 
 
 <p align="center">
 <img src="https://images.makerbot.com/products/MP04952/MP04952_l_1.jpg" width=400>
-<br>Figure 2: 3D-Printer Makerbot Replicator 2X
+<br>Figure 7: 3D-Printer Makerbot Replicator 2X
 </p>
 
 Since our product shall be usable with the users own spectacles, both clips were designed in three different sizes, so that they can be attached to temple arms of different widths. The clip for the VCNL4020 was made as small as possible and printed with transparent filament, in order to reduce the impact in the visual field of the user.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-7.PNG" alt="Clip-7.png" width=400>
-<br>Figure 2: Clip for VCNL4020 PCB
+<br>Figure 8: Clip for VCNL4020 PCB
 </p>
 
 Due to different anatomies of different users, like smaller or bigger eyes, eyeballs located further in- or outside the head, etc., it should be possible to adjust the position of the VCNL4020 PCB. Therefore, the PCB is not directly attached to the clip, but instead attached to a slider, which is itself slided into the clip. 
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3.PNG" alt="Slider-3.png" width=400>
-<br>Figure 2: Slider for VCNL4020 PCB
+<br>Figure 9: Slider for VCNL4020 PCB
 </p>
 
 The slider was designed with different inclinations, so that the angle between the temple arms and the PCB can be adjusted. There are also sliders that lower the position of the PCB with respect to the height of the temple arms. These exchangable sliders allow adjustment to different anatomies.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3-lower.PNG" alt="Slider-3-lower.png" width=400>
-<br>Figure 2: lower Slider for VCNL4020 PCB
+<br>Figure 10: lower Slider for VCNL4020 PCB
 </p>
 
 In order to attach the RFduino PCB to the users spectacles, there is another clip. This clip is used without a slider. Instead the PCB is directly attached to the clip, held by two tappets. There is a cavity in the clip, so that the reset button of the PCB can be pressed easily.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-RFDuino-Board-7.PNG" alt="Clip-RFDuino-Board-7.PNG" width=400>
-<br>Figure 2: Clip for RFduino PCB
+<br>Figure 11: Clip for RFduino PCB
 </p>
+
+The 3D-printed spectacles with the attached clips can be seen in the following graphic:
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Glasses-with-clips-for-poster.PNG" alt="Glasses-with-clips-for-poster.PNG" width=400>
+<br>Figure 12: Spectacles with clips 
+</p>
+
+The SLDPRT-files as well as the 3D-printing-files for the described parts can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/3dprinting).
 
 #eyeDrops Cocoa Application
 
@@ -148,17 +157,17 @@ To get it running ownload the source code from the (TODO) [software folder](/sof
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_off.png" alt="menu_item_off.png">
-<br>Figure 2: Application in off state.
+<br>Figure 13: Application in off state.
 </p>
 
 As you can see in Figure 1, there is no active window but only a menubar icon which pops down a usual menu when you click on it. In the above image the icon is gray and not white, telling the user that blur mode is turned off.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_on.png" alt="menu_item_on.png">
-<br>Figure 2: Application in on state.
+<br>Figure 14: Application in on state.
 </p>
 
-In Figure 2, however, the icon is white and thus signalizing that blur mode is activated. To switch bewteen those two states simply <b>ctrl-click</b> on the menubar item. If blur mode is actived and in case that a device is connected, the screen would be blurred if the user did not blink in adjustable time interval. See the [settings](#preferences) section for more information about the allowed time interval without an eye blink.
+In Figure 14, however, the icon is white and thus signalizing that blur mode is activated. To switch bewteen those two states simply <b>ctrl-click</b> on the menubar item. If blur mode is actived and in case that a device is connected, the screen would be blurred if the user did not blink in adjustable time interval. See the [settings](#preferences) section for more information about the allowed time interval without an eye blink.
 
 ##Establishing Bluetooth (LE) Connection<a name="establishing-bluetooth-le-connection" />
 
@@ -168,7 +177,7 @@ After a successful scan all the available devices are listed in the submenu <i>A
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_devices.png" alt="menu_devices.png">
-<br>Figure 3: List of available devices.
+<br>Figure 15: List of available devices.
 </p>
 
 A connected device is represented with a check mark next to its name. Another click on that same menuitem would then cancel the connection with the device. Selecting another device which is currently not the connected one would simply switch the connection to that device.<br>
@@ -181,18 +190,18 @@ In order to obtain a valid user profile either load an XML file containing one o
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_profiles2.png" alt="preferences_profiles.png">
-<br>Figure 4: Preferences - User profile manager.
+<br>Figure 16: Preferences - User profile manager.
 </p>
 
-The default directory the app is working in is `/Users/<CurrentUser>/eyeDrops` = `~/eyeDrops`, where `<CurrentUser>` is the name of the currently logged in user. This directory is created during the app's launching process and will of course not be overwritten if it already exists. You can put your XML file in this directory and restart the app, which will lead to an automatic reading of the profiles contained in XML file, or you click <i>Browse</i> in the <i>Profiles</i> tab in the Preferences Window (see Figure 4) and manually select your XML file there. After setting the new path, the profiles will be automatically read from the file and displayed in the TableView in the profile manager. Selecting a profile from that table will display the user profile's content in the TextView next to the table. It is also possible to delete a profile by clicking <i>Delete profile</i> or to create a new profile by clicking <i>Create new profile</i>, which will then open up the [calibration window](#calibration).
+The default directory the app is working in is `/Users/<CurrentUser>/eyeDrops` = `~/eyeDrops`, where `<CurrentUser>` is the name of the currently logged in user. This directory is created during the app's launching process and will of course not be overwritten if it already exists. You can put your XML file in this directory and restart the app, which will lead to an automatic reading of the profiles contained in XML file, or you click <i>Browse</i> in the <i>Profiles</i> tab in the Preferences Window (see Figure 16) and manually select your XML file there. After setting the new path, the profiles will be automatically read from the file and displayed in the TableView in the profile manager. Selecting a profile from that table will display the user profile's content in the TextView next to the table. It is also possible to delete a profile by clicking <i>Delete profile</i> or to create a new profile by clicking <i>Create new profile</i>, which will then open up the [calibration window](#calibration).
 
 ##Preferences
 
-The system wide settings can be changed in the <i>General</i> tab in the Preferences Window (see Figure 5). When starting the eyeDrops app for the first time, this settings will be initialized with values we used during the development phase. When properly closing the app, all made changes will be stored in `settings.txt` in the default directory and reloaded at the next launching process. That way your settings do not get lost.
+The system wide settings can be changed in the <i>General</i> tab in the Preferences Window (see Figure 17). When starting the eyeDrops app for the first time, this settings will be initialized with values we used during the development phase. When properly closing the app, all made changes will be stored in `settings.txt` in the default directory and reloaded at the next launching process. That way your settings do not get lost.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_general.png" alt="preferences_profiles.png">
-<br>Figure 5: Preferences - General settings.
+<br>Figure 17: Preferences - General settings.
 </p>
 
 ###Blurring settings
@@ -214,26 +223,26 @@ As explained above, calibration is essential for having a properly working blink
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window.png" alt="calibration_window.png">
-<br>Figure 6: Calibration window - On start-up.
+<br>Figure 18: Calibration window - On start-up.
 </p>
 
-Figure 6 shows the calibration window directly after start-up. Both eyeDrops app and wearable are now in calibration mode  where the RFDuino can be triggered to continuously send data packages containing sensor raw data and information about whether a blink was detected or not until a stop message arrives.
+Figure 18 shows the calibration window directly after start-up. Both eyeDrops app and wearable are now in calibration mode  where the RFDuino can be triggered to continuously send data packages containing sensor raw data and information about whether a blink was detected or not until a stop message arrives.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/animation.png" alt="animation.png">
-<br>Figure 7: Calibration animation (two successive steps).
+<br>Figure 19: Calibration animation (two successive steps).
 </p>
 
-A custom-built animation (see Figure 7) is used to guide the user through the data acquisition phase of the calibration. This phase takes nine seconds and should contain four blinks (represented by the larger circles). It can be run testwise without receiving any data, just to get to know the procedure by clicking the button <i>Run Test</i>.<br>
+A custom-built animation (see Figure 19) is used to guide the user through the data acquisition phase of the calibration. This phase takes nine seconds and should contain four blinks (represented by the larger circles). It can be run testwise without receiving any data, just to get to know the procedure by clicking the button <i>Run Test</i>.<br>
 <br>
 The completion of the data acquisition will be announced by an pop-up alert with instructions for the next steps. Afterwards the data will be plotted in the two designated graphs.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window2.png" alt="calibration_window2.png">
-<br>Figure 8: Calibration window - After receiving and plotting the sensor and blink data.
+<br>Figure 20: Calibration window - After receiving and plotting the sensor and blink data.
 </p>
 
-A completed data acquisition phase can be seen in Figure 8. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top). A red and a blue line will appear for negative resprectively positive threshold. Place the lines such that any noise lies between the threshold values. A good guiding value is to set the thresholds to half of it's max value. After setting the threshold values the user can either do another calibration with the newly gained values and check if the algorithm now detects (more) blinks or directly save the profile with the option to directly use the new profile.<br>
+A completed data acquisition phase can be seen in Figure 20. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top). A red and a blue line will appear for negative resprectively positive threshold. Place the lines such that any noise lies between the threshold values. A good guiding value is to set the thresholds to half of it's max value. After setting the threshold values the user can either do another calibration with the newly gained values and check if the algorithm now detects (more) blinks or directly save the profile with the option to directly use the new profile.<br>
 
 ###Ready to use
 
