@@ -53,17 +53,17 @@ Our Hardware consits mainly of three parts: The sensor that is detecting the bli
 
 ##VCNL4020
 
+The sensor used in our wearable is the VCNL4020 (http://www.vishay.com/docs/83476/vcnl4020.pdf). It is a proximity and ambient light sensor with a built-in infrared emitter and photo diode. The data obtained from the sensor vary, depending on how much light is reflected back to the sensor. Due to its high 16-bit-resolution and the operating range from 1 to 200 mm, it is possible to determine the difference of distance when pointing at an open or a closed eyelid. The data of the VCNL4020 can be transferred via an I²C Interface. Furthermore, interrupts can be sent. 
+
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/VCNL4020.png" alt="VCNL4020.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/VCNL4020.png" alt="VCNL4020.png" width="500">
 <br>Figure 1: Sensor VCNL4020.
 </p>
 
-The sensor used in our wearable is the VCNL4020 (http://www.vishay.com/docs/83476/vcnl4020.pdf). It is a proximity and ambient light sensor with a built-in infrared emitter and photo diode. The data obtained from the sensor vary, depending on how much light is reflected back to the sensor. Due to its high 16-bit-resolution and the operating range from 1 to 200 mm, it is possible to determine the difference of distance when pointing at an open or a closed eyelid. The data of the VCNL4020 can be transferred via an I²C Interface. Furthermore, interrupts can be sent. <br>
-<br>
 A custom PCB was designed for the VCNL4020. The goal was to get a board that can be attached to a clip, mounted in the front of spectacles, worn by the user. In order to not disturb the user while working, the PCB should be as small as possible. The first design featured pull-up resistors for the data, clock and interrupt signals, decoupling capacitors and five header pins for power supply, the I²C interface and the interrupt signal. 
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png" width="500">
 <br>Figure 1: First PCB design for VCNL4020.
 </p>
 
@@ -72,12 +72,12 @@ However, the first PCB design had to be revised due to its size, by moving the p
 The revised PCB was milled, using a Cirqoid CNC mill (http://cirqoid.com/). Both the milled PCB without components and the populated PCB can be seen here:
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.png" alt="PCB-VNCL.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.jpg" alt="PCB-VNCL.jpg" width=500>
 <br>Figure 1: milled PCB for VCNL4020.
 </p>
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.png" alt="sensorboard_populated.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.jpg" alt="sensorboard_populated.jpg" width=500>
 <br>Figure 1: populated PCB for VCNL4020.
 </p>
 
@@ -88,14 +88,14 @@ A ribbon cable was attached to the pads, so that the PCB for the VCNL can be con
 The microcontroller used in our project is an RFduino (http://www.rfduino.com/) which features a bluetooth low energy (BLE) compatible radio transceiver. It can be programmed using the Arduino IDE.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png" width=100>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png" width=500>
 <br>Figure 1: RFduino
 </p>
 
 A custom PCB was made for the RFduino, featuring a 3.3 V voltage regulator, decoupling capacitors, a reset button, the mentioned pull-up resistors for the VCNL4020, header pins to connect to the ribbon cable leading to the VCNL4020 PCB, header pins for programming the RFduino and a screw terminal for the input voltage. The populated PCB can be seen here:
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFduino_board.png" alt="RFduino_board.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFduino_board.jpg" alt="RFduino_board.jpg" width=500>
 <br>Figure 1: PCB for RFduino 
 </p>
 
