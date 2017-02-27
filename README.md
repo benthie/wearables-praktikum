@@ -176,7 +176,7 @@ In order to establish a bluetooth connection with the wearable, which is the nex
 After a successful scan all the available devices are listed in the submenu <i>Available Devices</i>. Connecting to the device can again be done either via selecting the corresponding menuitem or automatically by the app. The second way needs a setting in the <i>General</i> tab in the [Preferences Window](#preferences).<br>
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_devices2.png" alt="menu_devices2.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_devices_2.png" alt="menu_devices_2.png">
 <br>Figure 15: List of available devices.
 </p>
 
