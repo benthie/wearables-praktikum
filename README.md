@@ -71,7 +71,7 @@ To get it running ownload the source code from the (TODO) [software folder](/sof
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_off.png" alt="menu_item_off.png">
-<br>Figure 1: Application in off state.
+<br>Figure 2: Application in off state.
 </p>
 
 As you can see in Figure 1, there is no active window but only a menubar icon which pops down a usual menu when you click on it. In the above image the icon is gray and not white, telling the user that blur mode is turned off.
