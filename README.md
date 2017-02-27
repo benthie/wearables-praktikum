@@ -72,7 +72,7 @@ However, the first PCB design had to be revised due to its size, by moving the p
 The revised PCB was milled, using a Cirqoid CNC mill (http://cirqoid.com/). Both the milled PCB without components and the populated PCB can be seen here:
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL.png" alt="PCB-VCNL.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.png" alt="PCB-VNCL.png">
 <br>Figure 1: milled PCB for VCNL4020.
 </p>
 
@@ -88,14 +88,14 @@ A ribbon cable was attached to the pads, so that the PCB for the VCNL can be con
 The microcontroller used in our project is an RFduino (http://www.rfduino.com/) which features a bluetooth low energy (BLE) compatible radio transceiver. It can be programmed using the Arduino IDE.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png" width=100>
 <br>Figure 1: RFduino
 </p>
 
 A custom PCB was made for the RFduino, featuring a 3.3 V voltage regulator, decoupling capacitors, a reset button, the mentioned pull-up resistors for the VCNL4020, header pins to connect to the ribbon cable leading to the VCNL4020 PCB, header pins for programming the RFduino and a screw terminal for the input voltage. The populated PCB can be seen here:
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino_board.png" alt="RFDuino_board.png">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFduino_board.png" alt="RFduino_board.png">
 <br>Figure 1: PCB for RFduino 
 </p>
 
