@@ -7,7 +7,7 @@ In the context of the lab course "Wearable Computing Systems", which started at 
 
 Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of two different PCBs and the fixation parts to fix the PCBs to different kinds of glasses, as well as 3D printed glasses for users who usually do not wear any. All documenting files should enable you to rebuild the hardware such that you have a working system, which will be accepted by the software parts and then run without difficulty.<br>
 <br>
-The developed software has been published under an open source license (TODO) and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a Doxygen documentation, which can be found [here](docs/doxygen/annotated.html). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the videos (TODO)](https://www.youtube.com/watch?v=wOwblaKmyVw).
+The developed software has been published under an the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a Doxygen documentation, which can be found [here](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the videos (TODO)](https://www.youtube.com/watch?v=wOwblaKmyVw).
 
 
 ##Table of contents
@@ -153,7 +153,7 @@ The eyeDrops application is designed to offer a highly comfortable interface bet
 <br>
 We chose Mac OS X as the target operating system after a long period of attemps (with a lot of effort) to deliver a platform independent software for our wearable. In the end it was a sum of facts that influenced our decision. The main problem, to begin with, was to build a software that is able to blur the complete screen. Here, Java was the first programming language we tried, but we could not achieve a working version. To do so, one would have to enter a very low level graphics programming since Java cannot make use of a window compositing manager. With Cocoa and Objective-C on the other hand, we could deliver a working blurring of the screen by simply using Quartz Compositor of OS X. In the following process we tried to stick to Java for the main program, but then there was no working BLE stack for Java around that would work on all desired platforms (Windows, Mac, Linux) and thus there was no need to stick to Java anymore. Since two third of the developers were using a Mac and we already had a working software for blurring the screen, it stood to reason that we write the complete software just for Mac. And that is what we did after all.<br>
 <br>
-To get the eyeDrops application running, download the source code from the (TODO) [software folder](/software) and launch `eyeDrops.xcodeproj` with XCode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
+To get the eyeDrops application running, download the source code from the [software folder](/software/cocoa-app) and launch `eyeDrops.xcodeproj` with XCode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
 
 
 ##Blur mode
@@ -257,6 +257,8 @@ If you do not want to always launch the application out of XCode, you can use an
 
 ##Live Demo
 
+A link to our Youtube-Live-Demo will soon to be found here.
+
 ##Credits
 
 <b>The Noun Project - Source for the used items:</b>
@@ -268,8 +270,3 @@ If you do not want to always launch the application out of XCode, you can use an
 ##License
 
 This project has been published under the MIT License. 
-
-TODO
-  - warum mac
-  - Tooltip
-  - icon does not change when menubar is not black
