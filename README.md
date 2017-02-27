@@ -63,7 +63,7 @@ The sensor used in our wearable is the VCNL4020 (http://www.vishay.com/docs/8347
 A custom PCB was designed for the VCNL4020. The goal was to get a board that can be attached to a clip, mounted in the front of spectacles, worn by the user. In order to not disturb the user while working, the PCB should be as small as possible. The first design featured pull-up resistors for the data, clock and interrupt signals, decoupling capacitors and five header pins for power supply, the I²C interface and the interrupt signal. 
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png" width="500">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VCNL4020-large.png" alt="PCB-VCNL4020-large.png" width="300">
 <br>Figure 1: First PCB design for VCNL4020.
 </p>
 
@@ -72,12 +72,12 @@ However, the first PCB design had to be revised due to its size, by moving the p
 The revised PCB was milled, using a Cirqoid CNC mill (http://cirqoid.com/). Both the milled PCB without components and the populated PCB can be seen here:
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.jpg" alt="PCB-VNCL.jpg" width=500>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/PCB-VNCL.jpg" alt="PCB-VNCL.jpg" width=300>
 <br>Figure 1: milled PCB for VCNL4020.
 </p>
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.jpg" alt="sensorboard_populated.jpg" width=500>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/sensorboard_populated.jpg" alt="sensorboard_populated.jpg" width=400>
 <br>Figure 1: populated PCB for VCNL4020.
 </p>
 
@@ -88,18 +88,55 @@ A ribbon cable was attached to the pads, so that the PCB for the VCNL can be con
 The microcontroller used in our project is an RFduino (http://www.rfduino.com/) which features a bluetooth low energy (BLE) compatible radio transceiver. It can be programmed using the Arduino IDE.
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png" width=500>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFDuino.png" alt="RFDuino.png" width=400>
 <br>Figure 1: RFduino
 </p>
 
 A custom PCB was made for the RFduino, featuring a 3.3 V voltage regulator, decoupling capacitors, a reset button, the mentioned pull-up resistors for the VCNL4020, header pins to connect to the ribbon cable leading to the VCNL4020 PCB, header pins for programming the RFduino and a screw terminal for the input voltage. The populated PCB can be seen here:
 
 <p align="center">
-<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFduino_board.jpg" alt="RFduino_board.jpg" width=500>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/RFduino_board.jpg" alt="RFduino_board.jpg" width=400>
 <br>Figure 1: PCB for RFduino 
 </p>
 
 The schematic and layout of the PCB can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
+
+##3D-printed parts
+
+The 3D-printed parts include a clip and slider for the VCNL4020 PCB, a clip for the RFduino and spectacles for users who do not usually wear them. These parts were designed using the 3D CAD software Solidworks (http://www.solidworks.de/) and printed using the 3D-printer Makerbot Replicator 2X (https://store.makerbot.com/printers/replicator2x/). The used filament consists of ABS.
+
+<p align="center">
+<img src="https://images.makerbot.com/products/MP04952/MP04952_l_1.jpg" width=400>
+<br>Figure 2: 3D-Printer Makerbot Replicator 2X
+</p>
+
+Since our product shall be usable with the users own spectacles, both clips were designed in three different sizes, so that they can be attached to temple arms of different widths. The clip for the VCNL4020 was made as small as possible and printed with transparent filament, in order to reduce the impact in the visual field of the user.
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-7.png" width=400>
+<br>Figure 2: Clip for VCNL4020 PCB
+</p>
+
+Due to different anatomies of different users, like smaller or bigger eyes, eyeballs located further in- or outside the head, etc., it should be possible to adjust the position of the VCNL4020 PCB. Therefore, the PCB is not directly attached to the clip, but instead attached to a slider, which is itself slided into the clip. 
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3.png" width=400>
+<br>Figure 2: Slider for VCNL4020 PCB
+</p>
+
+The slider was designed with different inclinations, so that the angle between the temple arms and the PCB can be adjusted. There are also sliders that lower the position of the PCB with respect to the height of the temple arms. These exchangable sliders allow adjustment to different anatomies.
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3-lower.png" width=400>
+<br>Figure 2: lower Slider for VCNL4020 PCB
+</p>
+
+In order to attach the RFduino PCB to the users spectacles, there is another clip. This clip is used without a slider. Instead the PCB is directly attached to the clip, held by two tappets. There is a cavity in the clip, so that the reset button of the PCB can be pressed easily.
+
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-RFDuino-Board-7.png" width=400>
+<br>Figure 2: Clip for RFduino PCB
+</p>
 
 #eyeDrops Cocoa Application
 
