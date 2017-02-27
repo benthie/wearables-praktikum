@@ -43,6 +43,15 @@ So how to use our wearable? Simply grab the 3d-printed clips and the fitting sli
 <br>
 <i>Note:</i> If you want to use the compiled and built application (.app file) please follow the steps described [here](#executable-file).
 
+#Hardware
+
+##VCNL4020
+
+The sensor used in our wearable is the VCNL4020 (http://www.vishay.com/docs/83476/vcnl4020.pdf). It is a proximity and ambient light sensor with a built-in infrared emitter and photo diode. The data obtained from the sensor vary, depending on how much light is reflected back to the sensor. Due to its high 16-bit-resolution and the operating range from 1 to 200 mm, it is possible to determine the difference of distance when pointing at an open or a closed eyelid. The data of the VCNL4020 can be transferred via an I²C Interface. Furthermore, interrupts can be sent. <br>
+<br>
+A custom PCB was designed for the VCNL4020. The goal was to get a board that can be attached to a clip, mounted in the front of spectacles, worn by the user. In order to not disturb the user while working, the PCB should be as small as possible. The first design featured pull-up resistors for the data, clock and interrupt signals, decoupling capacitors and five header pins for power supply, the I²C interface and the interrupt signal. However, the first PCB design had to be revised due to its size, by moving the pull-up resistors to the second PCB. The revised PCB features a size of only 11 mm times 12 mm. The schematics and layouts of both versions  can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
+
+
 #eyeDrops Cocoa Application
 
 The eyeDrops application is designed to offer a highly comfortable interface between the user and the wearable. The main task of the entire system is to detect a lack of blinking and then react correspondingly. Our implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple blink, which was apparently long overdue. And since the app only needs to control the screen, it was designed as a pure menubar application, that is having no active window but just an icon in the menu bar.<br>
