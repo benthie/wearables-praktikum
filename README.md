@@ -151,7 +151,7 @@ The SLDPRT-files as well as the 3D-printing-files for the described parts can be
 
 The eyeDrops application is designed to offer a highly comfortable interface between the user and the wearable. The main task of the entire system is to detect a lack of blinking and then react correspondingly. Our implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple blink, which was apparently long overdue. And since the app only needs to control the screen, it was designed as a pure menubar application, that is having no active window but just an icon in the menu bar.<br>
 <br>
-To get it running ownload the source code from the (TODO) [software folder](/software) and launch `eyeDrops.xcodeproj` with XCode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
+To get it running download the source code from the (TODO) [software folder](/software) and launch `eyeDrops.xcodeproj` with XCode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
 
 ##Blur mode
 
