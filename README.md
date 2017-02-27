@@ -117,7 +117,7 @@ Since our product shall be usable with the users own spectacles, both clips were
 <br>Figure 8: Clip for VCNL4020 PCB
 </p>
 
-Due to different anatomies of different users, like smaller or bigger eyes, eyeballs located further in- or outside the head, etc., it should be possible to adjust the position of the VCNL4020 PCB. Therefore, the PCB is not directly attached to the clip, but instead attached to a slider, which is itself slided into the clip. 
+Due to different anatomies of different users, like smaller or bigger eyes, eyeballs located further in- or outside the head, etc., it should be possible to adjust the position of the VCNL4020 PCB. Therefore, the PCB is not directly attached to the clip, but instead attached to a slider, which is itself slided into the clip.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3.PNG" alt="Slider-3.png" width=400>
@@ -130,6 +130,10 @@ The slider was designed with different inclinations, so that the angle between t
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3-lower.PNG" alt="Slider-3-lower.png" width=400>
 <br>Figure 10: lower Slider for VCNL4020 PCB
 </p>
+
+In order to make adjustments easier, we designed further clips containing magnets. With these, it was possible to attach magnet-containing 3D-printed adapter that were stuck to the PCB. These adapters were also printed with different inclinations, so that, depending on the users anatomy, the sensor would always be well adjusted. However, very thin magnets were not strong enough to hold the adapter in place and thicker magnets were too thick, so that the PCB was encountered disturbing for the user.
+Another approach was a 3D-printed ball joint, which could not be used neither, due to the low printing quality for very small round objects. <br>
+<br>
 
 In order to attach the RFduino PCB to the users spectacles, there is another clip. This clip is used without a slider. Instead the PCB is directly attached to the clip, held by two tappets. There is a cavity in the clip, so that the reset button of the PCB can be pressed easily.
 
