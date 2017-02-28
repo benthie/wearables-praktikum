@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>eyeDrops: \notitle</title>
+<title>eyeDrops: Source code documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,17 +62,16 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title"></div>  </div>
+<div class="title">Source code documentation </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>Source code documentation</h1>
-<p>This documentation describes the source code and some key functionalities of the eyeDrops Cocoa Application. All classes and files are commented very detailed and important modules are described in the following.</p>
+<div class="textblock"><p>This documentation describes the source code and some key functionalities of the eyeDrops Cocoa Application. All classes and files are commented very detailed and important modules are described in the following.</p>
 <h2>Program structure</h2>
 <ul>
 <li><a class="el" href="interface_app_delegate.html" title="The App Delegate class. ">AppDelegate</a>: Main frame of the app that manages the status-icon, the menu and coordinates all the interaction between the other program parts.</li>
 <li><a class="el" href="interface_b_l_e_device_manager.html" title="The Bluetooth low energy device manager. ">BLEDeviceManager</a>: Bluetooth connection and communication manager (singleton).</li>
 <li><a class="el" href="interface_user_profile_manager.html" title="The user profile manager to read/write from XML file and manage the profiles. ">UserProfileManager</a>: The class that manages all the current user profiles (singleton).</li>
-<li><a class="el" href="interface_blurred_window.html" title="The Blurred Window controller.. ">BlurredWindow</a>: Key class in order to get a blurry screen.</li>
+<li><a class="el" href="interface_blurred_window.html" title="The Blurred Window controller.. ">BlurredWindow</a>: Key class in order blur the user’s screen.</li>
 <li><a class="el" href="interface_preferences_window_controller.html" title="The preferences window (controller). ">PreferencesWindowController</a>: The preferences window where the user can change the blurring and bluetooth settings and is also able to create, change or delete user profiles. Calibration procedures are started from within this window.</li>
 <li><a class="el" href="interface_calibration_window_controller.html" title="The calibration window (controller). ">CalibrationWindowController</a>: The calibration window where the user can perform a calibration. The animation (<a class="el" href="interface_animation_view_controller.html" title="This class controlls the animation view. ">AnimationViewController</a>, <a class="el" href="interface_animation_view.html" title="This class takes care of the calibration animation. ">AnimationView</a>) is used to signalise when the user should blink. The calibration results are then presented in the two given plots (<a class="el" href="interface_sensor_data_view_controller.html" title="Sensor data view controller class class. ">SensorDataViewController</a>, <a class="el" href="interface_blink_prediction_view_controller.html" title="Blink data view controller class class. ">BlinkPredictionViewController</a>).</li>
 <li><a class="el" href="interface_settings.html" title="The shared settings container. ">Settings</a>: The settings class (singleton) manages all the user settings. Any changes that will be made during runtime are automatically done on the instance’s variables. when closing the application, all settings will be saved to a file and reloaded at the next start up.</li>

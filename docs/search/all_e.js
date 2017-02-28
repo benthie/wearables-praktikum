@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['source_20code_20documentation',['Source code documentation',['../index.html',1,'']]],
   ['saveprofilebutton',['saveProfileButton',['../interface_calibration_window_controller.html#ab7fe2d5025fe71548e54c321596b5f2e',1,'CalibrationWindowController']]],
   ['saveprofiles',['saveProfiles',['../interface_user_profile_manager.html#aa833e080d92dd139ac9d420b28586e77',1,'UserProfileManager']]],
   ['scanfordevices',['scanForDevices',['../interface_b_l_e_device_manager.html#a14da336ff5f08c70fe3ecce54e5239ea',1,'BLEDeviceManager']]],
