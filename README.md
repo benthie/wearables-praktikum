@@ -7,7 +7,7 @@ In the context of the lab course "Wearable Computing Systems", which started at 
 
 Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of two different PCBs and the fixation parts to fix the PCBs to different kinds of glasses, as well as 3D printed glasses for users who usually do not wear any. All documenting files should enable you to rebuild the hardware such that you have a working system, which will be accepted by the software parts and then run without difficulty.<br>
 <br>
-The developed software has been published under an the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a Doxygen documentation, which can be found [here](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the videos (TODO)](https://www.youtube.com/watch?v=wOwblaKmyVw).
+The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the video (TODO)](https://www.youtube.com/watch?v=cfOa1a8hYP8).
 
 
 ##Table of contents
@@ -25,6 +25,7 @@ The developed software has been published under an the open source MIT License a
   - [Calibration](#calibration)
   - [Ready to use](#ready-to-use)
   - [Executable File](#executable-file)
+  - [Doxygen documentation](https://benthie.github.io/wearables-praktikum/)
 - [Live Demo](#live-demo)
 - [Credits](#credits)
 - [License](#license)
