@@ -154,7 +154,7 @@ The eyeDrops application is designed to offer a highly comfortable interface bet
 <br>
 We chose Mac OS X as the target operating system after a long period of attemps (with a lot of effort) to deliver a platform independent software for our wearable. In the end it was a sum of facts that influenced our decision. The main problem, to begin with, was to build a software that is able to blur the complete screen. Here, Java was the first programming language we tried, but we could not achieve a working version. To do so, one would have to enter a very low level graphics programming since Java cannot make use of a window compositing manager. With Cocoa and Objective-C on the other hand, we could deliver a working blurring of the screen by simply using Quartz Compositor of OS X. In the following process we tried to stick to Java for the main program, but then there was no working BLE stack for Java around that would work on all desired platforms (Windows, Mac, Linux) and thus there was no need to stick to Java anymore. Since two third of the developers were using a Mac and we already had a working software for blurring the screen, it stood to reason that we write the complete software just for Mac. And that is what we did after all.<br>
 <br>
-To get the eyeDrops application running, download the source code from the [software folder](/software/cocoa-app) and launch `eyeDrops.xcodeproj` with XCode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
+To get the eyeDrops application running, download the source code from the [software folder](/software/cocoa-app) and launch `eyeDrops.xcodeproj` with Xcode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
 
 
 ##Blur mode
@@ -254,7 +254,7 @@ Now that a valid profile has been created and uploaded to the wearable, the syst
 
 ###Using the Cocoa executable (.app file)<a name="executable-file" />
 
-If you do not want to always launch the application out of XCode, you can use an executable .app file. After running the app out of XCode, an .app file has been automatically created there. In your project navigator in XCode you can find it in the `Products` folder. Right-click on `eyeDrops.app` and select `Show in Finder`. The opened folder contains the app as well as two frameworks. Those frameworks must be copied into `/System/Library/Frameworks` to make the `eyeDrops.app` launchable.
+If you do not want to always launch the application out of Xcode, you can use an executable .app file. After running the app out of Xcode, an .app file has been automatically created there. In your project navigator in Xcode you can find it in the `Products` folder. Right-click on `eyeDrops.app` and select `Show in Finder`. The opened folder contains the app as well as two frameworks. Those frameworks must be copied into `/System/Library/Frameworks` to make the `eyeDrops.app` launchable.
 
 ##Live Demo
 
