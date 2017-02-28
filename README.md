@@ -7,7 +7,7 @@ In the context of the lab course "Wearable Computing Systems", which started at 
 
 Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of two different PCBs and the fixation parts to fix the PCBs to different kinds of glasses, as well as 3D printed glasses for users who usually do not wear any. All documenting files should enable you to rebuild the hardware such that you have a working system, which will be accepted by the software parts and then run without difficulty.<br>
 <br>
-The developed software has been published under an the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a Doxygen documentation, which can be found [here](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the videos (TODO)](https://www.youtube.com/watch?v=wOwblaKmyVw).
+The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the video (TODO)](https://www.youtube.com/watch?v=cfOa1a8hYP8).
 
 
 ##Table of contents
@@ -25,6 +25,7 @@ The developed software has been published under an the open source MIT License a
   - [Calibration](#calibration)
   - [Ready to use](#ready-to-use)
   - [Executable File](#executable-file)
+  - [Doxygen documentation](https://benthie.github.io/wearables-praktikum/)
 - [Live Demo](#live-demo)
 - [Credits](#credits)
 - [License](#license)
@@ -39,9 +40,9 @@ The developed software has been published under an the open source MIT License a
 
 ###How to use
 
-So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
+So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is to download the [Xcode project](software/cocoa-app), follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
 <br>
-<i>Note:</i> If you want to use the compiled and built application (.app file) please follow the steps described [here](#executable-file).
+<i>Note:</i> If you want to use the compiled and built application (.app file) please follow the steps described in section [Executable File](#executable-file).
 
 #Hardware
 
@@ -153,7 +154,7 @@ The eyeDrops application is designed to offer a highly comfortable interface bet
 <br>
 We chose Mac OS X as the target operating system after a long period of attemps (with a lot of effort) to deliver a platform independent software for our wearable. In the end it was a sum of facts that influenced our decision. The main problem, to begin with, was to build a software that is able to blur the complete screen. Here, Java was the first programming language we tried, but we could not achieve a working version. To do so, one would have to enter a very low level graphics programming since Java cannot make use of a window compositing manager. With Cocoa and Objective-C on the other hand, we could deliver a working blurring of the screen by simply using Quartz Compositor of OS X. In the following process we tried to stick to Java for the main program, but then there was no working BLE stack for Java around that would work on all desired platforms (Windows, Mac, Linux) and thus there was no need to stick to Java anymore. Since two third of the developers were using a Mac and we already had a working software for blurring the screen, it stood to reason that we write the complete software just for Mac. And that is what we did after all.<br>
 <br>
-To get the eyeDrops application running, download the source code from the [software folder](/software/cocoa-app) and launch `eyeDrops.xcodeproj` with XCode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
+To get the eyeDrops application running, download the source code from the [software folder](/software/cocoa-app) and launch `eyeDrops.xcodeproj` with Xcode. Make sure that you properly include the CorePlot framework as described [here](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application). The project is now ready to be built. The following documentation explains how to use the application you should be able to see now.
 
 
 ##Blur mode
@@ -253,7 +254,7 @@ Now that a valid profile has been created and uploaded to the wearable, the syst
 
 ###Using the Cocoa executable (.app file)<a name="executable-file" />
 
-If you do not want to always launch the application out of XCode, you can use an executable .app file. After running the app out of XCode, an .app file has been automatically created there. In your project navigator in XCode you can find it in the `Products` folder. Right-click on `eyeDrops.app` and select `Show in Finder`. The opened folder contains the app as well as two frameworks. Those frameworks must be copied into `/System/Library/Frameworks` to make the `eyeDrops.app` launchable.
+If you do not want to always launch the application out of Xcode, you can use an executable .app file. After running the app out of Xcode, an .app file has been automatically created there. In your project navigator in Xcode you can find it in the `Products` folder. Right-click on `eyeDrops.app` and select `Show in Finder`. The opened folder contains the app as well as two frameworks. Those frameworks must be copied into `/System/Library/Frameworks` to make the `eyeDrops.app` launchable.
 
 ##Live Demo
 
