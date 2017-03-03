@@ -98,6 +98,16 @@ A custom PCB was made for the RFduino, featuring a 3.3 V voltage regulator, deco
 
 The schematic and layout of the PCB can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
 
+##Eye blink detection algorithm
+
+The blink detection algorithm can be divided in a filtering and a processing stage. The logarithmically scaled incom- ing raw data of the sensor are converted into distances of arbitrary unit. Any offset is removed by computing the dif- ferences between the samples and an equally weighted moving average filter with a window size of 16 (experimentally determined) is applied to the derivative of the data. With that, the filtering stage is completed and the actual detection algorithm begins, which is applied to the last 200 samples.
+Instead of going through all samples within that window for every new sample, the characteristic values are kept in real time as the samples come in.
+In order to understand the algorithm more easily let’s first have a look at the pattern that has to be detected. Since the different eye blinks vary in duration and peak height as shown in figure ??, the algorithm has to accomodate for this dynamic behaviour. Therefore, a simple pattern correlation would not perform very well. Instead, the algorithm looks for a certain dynamic pattern in the preprocessed data.
+<p align="center">
+<img src="">
+<br>
+</p>
+
 ##3D-printed parts
 
 The 3D-printed parts include a clip and slider for the VCNL4020 PCB, a clip for the RFduino and spectacles for users who do not usually wear them. These parts were designed using the 3D CAD software Solidworks (http://www.solidworks.de/) and printed using the 3D-printer Makerbot Replicator 2X (https://store.makerbot.com/printers/replicator2x/). The used filament consists of ABS.
