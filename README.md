@@ -17,6 +17,7 @@ The developed software has been published under the open source MIT License and 
   - [VCNL4020](#vcnl-4020)
   - [RFDuino](#rfduino)
   - [3D-printed parts](#3d-printed-parts)
+- [Eye blink detection algorithm] (#Eye blink detection algorithm)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
   - [Blur mode](#blur-mode)
   - [Bluetooth connection](#establishing-bluetooth-le-connection)
@@ -98,7 +99,7 @@ A custom PCB was made for the RFduino, featuring a 3.3 V voltage regulator, deco
 
 The schematic and layout of the PCB can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/eagle).
 
-##Eye blink detection algorithm
+#Eye blink detection algorithm
 
 The blink detection algorithm can be divided in a filtering and a processing stage. The logarithmically scaled incoming raw data of the sensor are converted into distances of arbitrary unit. Any offset is removed by computing the differences between the samples and an equally weighted moving average filter with a window size of 16 (experimentally determined) is applied to the derivative of the data. With that, the filtering stage is completed and the actual detection algorithm begins, which is applied to the last 200 samples.<br>
 Instead of going through all samples within that window for every new sample, the characteristic values are kept in real time as the samples come in.<br>
@@ -119,7 +120,7 @@ Therefore, a simple pattern correlation would not perform very well. Instead, th
 5. The positive threshold is crossed upwards. This means that the eye lid is beginning to open again.
 6. The positive threshold is crossed downwards. At this point the maximum value and its index between the two positive threshold crossings is determined. If the sample number between the last minimum value and the maximum value is within a certain range, the number of zero crossings does not exceed a certain limit, the maximum value itself does not exceed a certain value either, and the blink level has a value of 1 indicating a previes eye closing event, the blink level is increased again by one. This means the eye is stopping to open and therefore almost open again. It is now assumed, that an actual eye blink was detected for real time application.<br>If any of the above conditions is not met, the blink level is reset to zero.
 7. Zero is crossed downwards. If the overall duration of the eye blink is within a certain range the blink detection is complete, the blink level is reset to zero and an eye blink is reported. This means that the eye is fully open again or at least the eye lid movement cannot be detected by the sensor anymore for the remaining eye opening procedure.
-<br>
+
 The actual threshold crossing detection is extended with a hysteresis procedure. In order to cross a threshold upwards the threshold plus a hysteresis value has to be crossed.
 In order to cross it downwards, the threshold minus a hysteresis value has to be crossed. This ensures, that a small fluctuation in the data caused by noise does not mess up the steps of the algorithm. The hysteresis is shown as a gray area in figure 8.<br>
 Testing this algorithm on multiple persons showed that it does not necessarily work out of the box for everybody but certain paramaters such as the thresholds, hysteresis and sample distances between the steps have to be adjusted. As shown in figure 7 the durations and peak values for only a single person differs from eye blink to eye blink. Looking at the data for different persons this varies even more.
@@ -130,28 +131,28 @@ The 3D-printed parts include a clip and slider for the VCNL4020 PCB, a clip for 
 
 <p align="center">
 <img src="https://images.makerbot.com/products/MP04952/MP04952_l_1.jpg" width=400>
-<br>Figure 7: 3D-Printer Makerbot Replicator 2X
+<br>Figure 9: 3D-Printer Makerbot Replicator 2X
 </p>
 
 Since our product shall be usable with the users own spectacles, both clips were designed in three different sizes, so that they can be attached to temple arms of different widths. The clip for the VCNL4020 was made as small as possible and printed with transparent filament, in order to reduce the impact in the visual field of the user.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-7.PNG" alt="Clip-7.png" width=400>
-<br>Figure 8: Clip for VCNL4020 PCB
+<br>Figure 10: Clip for VCNL4020 PCB
 </p>
 
 Due to different anatomies of different users, like smaller or bigger eyes, eyeballs located further in- or outside the head, etc., it should be possible to adjust the position of the VCNL4020 PCB. Therefore, the PCB is not directly attached to the clip, but instead attached to a slider, which is itself slided into the clip.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3.PNG" alt="Slider-3.png" width=400>
-<br>Figure 9: Slider for VCNL4020 PCB
+<br>Figure 11: Slider for VCNL4020 PCB
 </p>
 
 The slider was designed with different inclinations, so that the angle between the temple arms and the PCB can be adjusted. There are also sliders that lower the position of the PCB with respect to the height of the temple arms. These exchangable sliders allow adjustment to different anatomies.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Slider-3-lower.PNG" alt="Slider-3-lower.png" width=400>
-<br>Figure 10: lower Slider for VCNL4020 PCB
+<br>Figure 12: lower Slider for VCNL4020 PCB
 </p>
 
 In order to make adjustments easier, we designed further clips containing magnets. With these, it was possible to attach magnet-containing 3D-printed adapter that were stuck to the PCB. These adapters were also printed with different inclinations, so that, depending on the users anatomy, the sensor would always be well adjusted. However, very thin magnets were not strong enough to hold the adapter in place and thicker magnets were too thick, so that the PCB was encountered disturbing for the user.
@@ -162,14 +163,14 @@ In order to attach the RFduino PCB to the users spectacles, there is another cli
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Clip-RFDuino-Board-7.PNG" alt="Clip-RFDuino-Board-7.PNG" width=400>
-<br>Figure 11: Clip for RFduino PCB
+<br>Figure 13: Clip for RFduino PCB
 </p>
 
 The 3D-printed spectacles with the attached clips can be seen in the following graphic:
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/Glasses-with-clips-for-poster.PNG" alt="Glasses-with-clips-for-poster.PNG" width=400>
-<br>Figure 12: Spectacles with clips 
+<br>Figure 14: Spectacles with clips 
 </p>
 
 The SLDPRT-files as well as the 3D-printing-files for the described parts can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/3dprinting).
@@ -187,17 +188,17 @@ To get the eyeDrops application running, download the source code from the [soft
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_off.png" alt="menu_item_off.png">
-<br>Figure 13: Application in off state.
+<br>Figure 15: Application in off state.
 </p>
 
-As you can see in Figure 1, there is no active window but only a menubar icon which pops down a usual menu when you click on it. In the above image the icon is gray and not white, telling the user that blur mode is turned off.
+As you can see in Figure 15, there is no active window but only a menubar icon which pops down a usual menu when you click on it. In the above image the icon is gray and not white, telling the user that blur mode is turned off.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_item_on.png" alt="menu_item_on.png">
-<br>Figure 14: Application in on state.
+<br>Figure 16: Application in on state.
 </p>
 
-In Figure 14, however, the icon is white and thus signalizing that blur mode is activated. To switch bewteen those two states simply <b>ctrl-click</b> on the menubar item. If blur mode is actived and in case that a device is connected, the screen would be blurred if the user did not blink in adjustable time interval. See the [settings](#preferences) section for more information about the allowed time interval without an eye blink.
+In Figure 16, however, the icon is white and thus signalizing that blur mode is activated. To switch bewteen those two states simply <b>ctrl-click</b> on the menubar item. If blur mode is actived and in case that a device is connected, the screen would be blurred if the user did not blink in adjustable time interval. See the [settings](#preferences) section for more information about the allowed time interval without an eye blink.
 
 ##Establishing Bluetooth (LE) Connection<a name="establishing-bluetooth-le-connection" />
 
@@ -207,7 +208,7 @@ After a successful scan all the available devices are listed in the submenu <i>A
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/menu_devices_2.png" alt="menu_devices_2.png">
-<br>Figure 15: List of available devices.
+<br>Figure 17: List of available devices.
 </p>
 
 A connected device is represented with a check mark next to its name. Another click on that same menuitem would then cancel the connection with the device. Selecting another device which is currently not the connected one would simply switch the connection to that device.<br>
@@ -220,18 +221,18 @@ In order to obtain a valid user profile either load an XML file containing one o
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_profiles2.png" alt="preferences_profiles.png">
-<br>Figure 16: Preferences - User profile manager.
+<br>Figure 18: Preferences - User profile manager.
 </p>
 
-The default directory the app is working in is `/Users/<CurrentUser>/eyeDrops` = `~/eyeDrops`, where `<CurrentUser>` is the name of the currently logged in user. This directory is created during the app's launching process and will of course not be overwritten if it already exists. You can put your XML file in this directory and restart the app, which will lead to an automatic reading of the profiles contained in XML file, or you click <i>Browse</i> in the <i>Profiles</i> tab in the Preferences Window (see Figure 16) and manually select your XML file there. After setting the new path, the profiles will be automatically read from the file and displayed in the TableView in the profile manager. Selecting a profile from that table will display the user profile's content in the TextView next to the table. It is also possible to delete a profile by clicking <i>Delete profile</i> or to create a new profile by clicking <i>Create new profile</i>, which will then open up the [calibration window](#calibration).
+The default directory the app is working in is `/Users/<CurrentUser>/eyeDrops` = `~/eyeDrops`, where `<CurrentUser>` is the name of the currently logged in user. This directory is created during the app's launching process and will of course not be overwritten if it already exists. You can put your XML file in this directory and restart the app, which will lead to an automatic reading of the profiles contained in XML file, or you click <i>Browse</i> in the <i>Profiles</i> tab in the Preferences Window (see Figure 18) and manually select your XML file there. After setting the new path, the profiles will be automatically read from the file and displayed in the TableView in the profile manager. Selecting a profile from that table will display the user profile's content in the TextView next to the table. It is also possible to delete a profile by clicking <i>Delete profile</i> or to create a new profile by clicking <i>Create new profile</i>, which will then open up the [calibration window](#calibration).
 
 ##Preferences
 
-The system wide settings can be changed in the <i>General</i> tab in the Preferences Window (see Figure 17). When starting the eyeDrops app for the first time, this settings will be initialized with values we used during the development phase. When properly closing the app, all made changes will be stored in `settings.txt` in the default directory and reloaded at the next launching process. That way your settings do not get lost.
+The system wide settings can be changed in the <i>General</i> tab in the Preferences Window (see Figure 19). When starting the eyeDrops app for the first time, this settings will be initialized with values we used during the development phase. When properly closing the app, all made changes will be stored in `settings.txt` in the default directory and reloaded at the next launching process. That way your settings do not get lost.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/preferences_general.png" alt="preferences_profiles.png">
-<br>Figure 17: Preferences - General settings.
+<br>Figure 19: Preferences - General settings.
 </p>
 
 ###Blurring settings
@@ -245,34 +246,34 @@ The system wide settings can be changed in the <i>General</i> tab in the Prefere
 - <b>Automatically connect:</b> determines whether the app automatically connects to the last known device
 
 ###Battery Level
-- This LevelIndicator shows the battery level of the wearable. The indication here is not really proportional to the battery voltage but to the voltage after the voltage regulator in the PCB. For more information about this see the [report TODO](/docs/report.pdf).
+- This LevelIndicator shows the battery level of the wearable. The indication here is not really proportional to the battery voltage but to the voltage after the voltage regulator in the PCB. <!--For more information about this see the [report TODO](/docs/report.pdf).-->
 
 ##Calibration
 
-As explained above, calibration is essential for having a properly working blink detection algorithm. Since every eye is unique, differing shapes, sizes and positions in the skull are what the sensor is facing. And due to those inequalities the measured distances to the eye vary from one user to the other. The implemented calibration procedure let's the user define his or her individual calibration parameters, which are then uploaded to the wearable as well as stored in a profile on the computer. More information about the calibration and the different parameters used to detect a blink is elaborately decribed in the [final report (TODO)](/docs/report.pdf).
+As explained above, calibration is essential for having a properly working blink detection algorithm. Since every eye is unique, differing shapes, sizes and positions in the skull are what the sensor is facing. And due to those inequalities the measured distances to the eye vary from one user to the other. The implemented calibration procedure let's the user define his or her individual calibration parameters, which are then uploaded to the wearable as well as stored in a profile on the computer. More information about the calibration and the different parameters used to detect a blink is elaborately described [above](#Eye blink detection algorithm).
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window.png" alt="calibration_window.png">
-<br>Figure 18: Calibration window - On start-up.
+<br>Figure 20: Calibration window - On start-up.
 </p>
 
-Figure 18 shows the calibration window directly after start-up. Both eyeDrops app and wearable are now in calibration mode  where the RFDuino can be triggered to continuously send data packages containing sensor raw data and information about whether a blink was detected or not until a stop message arrives.
+Figure 20 shows the calibration window directly after start-up. Both eyeDrops app and wearable are now in calibration mode  where the RFDuino can be triggered to continuously send data packages containing sensor raw data and information about whether a blink was detected or not until a stop message arrives.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/animation.png" alt="animation.png">
-<br>Figure 19: Calibration animation (two successive steps).
+<br>Figure 21: Calibration animation (two successive steps).
 </p>
 
-A custom-built animation (see Figure 19) is used to guide the user through the data acquisition phase of the calibration. This phase takes nine seconds and should contain four blinks (represented by the larger circles). It can be run testwise without receiving any data, just to get to know the procedure by clicking the button <i>Run Test</i>.<br>
+A custom-built animation (see Figure 21) is used to guide the user through the data acquisition phase of the calibration. This phase takes nine seconds and should contain four blinks (represented by the larger circles). It can be run testwise without receiving any data, just to get to know the procedure by clicking the button <i>Run Test</i>.<br>
 <br>
 The completion of the data acquisition will be announced by an pop-up alert with instructions for the next steps. Afterwards the data will be plotted in the two designated graphs.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window2.png" alt="calibration_window2.png">
-<br>Figure 20: Calibration window - After receiving and plotting the sensor and blink data.
+<br>Figure 22: Calibration window - After receiving and plotting the sensor and blink data.
 </p>
 
-A completed data acquisition phase can be seen in Figure 20. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top). A red and a blue line will appear for negative resprectively positive threshold. Place the lines such that any noise lies between the threshold values. A good guiding value is to set the thresholds to half of it's max value. After setting the threshold values the user can either do another calibration with the newly gained values and check if the algorithm now detects (more) blinks or directly save the profile with the option to directly use the new profile.<br>
+A completed data acquisition phase can be seen in Figure 22. The preset values on the right side of the calibration window turned out to make sense for most of test users and can be adopted for new profiles without being worried about bad performance. The only two values that are mandatory to be set by the user are the threshold values. These can be obtained by simply clicking on the sensor data graph (top). A red and a blue line will appear for negative resprectively positive threshold. Place the lines such that any noise lies between the threshold values. A good guiding value is to set the thresholds to half of it's max value. After setting the threshold values the user can either do another calibration with the newly gained values and check if the algorithm now detects (more) blinks or directly save the profile with the option to directly use the new profile.<br>
 
 ###Ready to use
 
