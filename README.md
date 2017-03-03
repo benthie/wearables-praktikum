@@ -285,7 +285,7 @@ If you do not want to always launch the application out of Xcode, you can use an
 
 ##Live Demo
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/3qRnkdi4qJQ?rel=0" frameborder="0" allowfullscreen></iframe>
+[Link to youtube video](https://www.youtube.com/embed/3qRnkdi4qJQ)
 
 ##Credits
 
