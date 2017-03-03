@@ -41,7 +41,7 @@ The developed software has been published under the open source MIT License and 
 
 ###How to use
 
-So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is to download the [Xcode project](software/cocoa-app), follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
+So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our [RFDuino sketch](software/RFDuino) to the wearable. After completing this step the last thing to do is to download the [Xcode project](software/cocoa-app), follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
 <br>
 <i>Note:</i> If you want to use the compiled and built application (.app file) please follow the steps described in section [Executable File](#executable-file).
 
