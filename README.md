@@ -7,7 +7,7 @@ In the context of the lab course "Wearable Computing Systems", which started at 
 
 Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of two different PCBs and the fixation parts to fix the PCBs to different kinds of glasses, as well as 3D printed glasses for users who usually do not wear any. All documenting files should enable you to rebuild the hardware such that you have a working system, which will be accepted by the software parts and then run without difficulty.<br>
 <br>
-The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [here](#eye-blink-detection-algorithm). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the video](https://youtu.be/3qRnkdi4qJQ).
+The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa app via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [here](#eye-blink-detection-algorithm). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short [video](https://youtu.be/3qRnkdi4qJQ).
 
 
 ##Table of contents
@@ -41,7 +41,7 @@ The developed software has been published under the open source MIT License and 
 
 ###How to use
 
-So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our RFDuino sketch to the wearable. After completing this step the last thing to do is to download the [Xcode project](software/cocoa-app), follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
+So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our [RFDuino sketch](software/RFDuino) to the wearable. After completing this step the last thing to do is to download the [Xcode project](software/cocoa-app), follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
 <br>
 <i>Note:</i> If you want to use the compiled and built application (.app file) please follow the steps described in section [Executable File](#executable-file).
 
@@ -175,7 +175,7 @@ The 3D-printed spectacles with the attached clips can be seen in the following g
 
 The SLDPRT-files as well as the 3D-printing-files for the described parts can be found [here](https://github.com/benthie/wearables-praktikum/tree/master/hardware/3dprinting).
 
-#eyeDrops Cocoa Application
+#eyeDrops Cocoa application
 
 The eyeDrops application is designed to offer a highly comfortable interface between the user and the wearable. The main task of the entire system is to detect a lack of blinking and then react correspondingly. Our implemented reaction to such a lack of blinking is a progressive blurring of the screen in order to enforce an eye blink. A blurred screen can be cleared by a simple blink, which was apparently long overdue. And since the app only needs to control the screen, it was designed as a pure menubar application, that is having no active window but just an icon in the menu bar.<br>
 <br>
@@ -290,7 +290,7 @@ If you do not want to always launch the application out of Xcode, you can use an
 ##Credits
 
 <b>The Noun Project - Source for the used items:</b>
-- <i>Rohit M S:</i> Creator of the application icon
+- <i>Rohit M S:</i> Creator of the main icon
 - <i>Nicolas Morand:</i> Creator of the profiles icon
 - <i>Guilhem:</i> Creator of the battery icon
 - <i>Viktor Vorobyev:</i> Creator of the bluetooth icon
