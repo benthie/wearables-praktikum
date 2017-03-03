@@ -215,7 +215,7 @@ A connected device is represented with a check mark next to its name. Another cl
 <br>
 In case that a connection was successfully established, the wearable now needs a user profile to work with. This user profile contains the paramerters used by the blink detection algorithm. Without a valid user the wearable will be idle.
 
-##User profiles / Profile manager<a name="user-profile-manager" />
+##User profiles / profile manager<a name="user-profile-manager" />
 
 In order to obtain a valid user profile either load an XML file containing one or more valid profiles or use the systems [calibration](#calibration) procedure to create a new profile.
 
