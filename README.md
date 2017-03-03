@@ -102,11 +102,17 @@ The schematic and layout of the PCB can be found [here](https://github.com/benth
 
 The blink detection algorithm can be divided in a filtering and a processing stage. The logarithmically scaled incom- ing raw data of the sensor are converted into distances of arbitrary unit. Any offset is removed by computing the dif- ferences between the samples and an equally weighted moving average filter with a window size of 16 (experimentally determined) is applied to the derivative of the data. With that, the filtering stage is completed and the actual detection algorithm begins, which is applied to the last 200 samples.
 Instead of going through all samples within that window for every new sample, the characteristic values are kept in real time as the samples come in.
-In order to understand the algorithm more easily let’s first have a look at the pattern that has to be detected. Since the different eye blinks vary in duration and peak height as shown in figure ??, the algorithm has to accomodate for this dynamic behaviour. Therefore, a simple pattern correlation would not perform very well. Instead, the algorithm looks for a certain dynamic pattern in the preprocessed data.
+In order to understand the algorithm more easily let’s first have a look at the pattern that has to be detected. Since the different eye blinks vary in duration and peak height as shown in figure 7, the algorithm has to accomodate for this dynamic behaviour. 
 <p align="center">
-<img src="">
-<br>
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/accumulated_blinks_clean.png" alt="Accumulated eye blinks" width=400>
+<br>Figure 7: Accumulated eye blinks with varying durations from single person
 </p>
+Therefore, a simple pattern correlation would not perform very well. Instead, the algorithm looks for a certain dynamic pattern in the preprocessed data. It performs edge detection and zero crossing detection by comparing the current value with the previous one. The values are split into four areas: above positive threshold, between positive threshold and zero, between zero and negative threshold and below negative threshold. With this in mind six different crossings can be detected creating the following algorithm to detect the actual eye blink as shown in figure 8.
+<p align="center">
+<img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/detailed_single_blink.png" alt="Step by step eye blink" width=400>
+<br>Figure 8: Step by step blink detection
+</p>
+- [1] Zero has to be crossed from a positive to a nega- tive value. This means that the measured distance is decreasing and the eye lid is closing. Zero was just cross for point 1.
 
 ##3D-printed parts
 
