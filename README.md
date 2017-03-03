@@ -7,7 +7,7 @@ In the context of the lab course "Wearable Computing Systems", which started at 
 
 Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of two different PCBs and the fixation parts to fix the PCBs to different kinds of glasses, as well as 3D printed glasses for users who usually do not wear any. All documenting files should enable you to rebuild the hardware such that you have a working system, which will be accepted by the software parts and then run without difficulty.<br>
 <br>
-The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa app via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [here](#eye-blink-detection-algorithm). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short [video](https://youtu.be/3qRnkdi4qJQ).
+The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFduino sketch and a Mac OS X Cocoa application. The sketch for the RFduino contains the blink detection algorithm and is able to communicate with the Cocoa app via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [here](#eye-blink-detection-algorithm). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short [video](https://youtu.be/3qRnkdi4qJQ).
 
 
 ##Table of contents
@@ -15,7 +15,7 @@ The developed software has been published under the open source MIT License and 
 - [How to use](#how-to-use)
 - [Hardware](#hardware)
   - [VCNL4020](#vcnl4020)
-  - [RFDuino](#rfduino)
+  - [RFduino](#rfduino)
   - [3D-printed parts](#3d-printed-parts)
 - [Eye blink detection algorithm](#eye-blink-detection-algorithm)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
@@ -33,21 +33,21 @@ The developed software has been published under the open source MIT License and 
 
 ###Requirements
 - Arduino IDE ([Arduino software](https://www.arduino.cc/en/main/software)) 
-- RFDuino Package ([Link to the Git](https://github.com/RFduino/RFduino/blob/master/README.md))
+- RFduino Package ([Link to the Git](https://github.com/RFduino/RFduino/blob/master/README.md))
 - Mac OS X (sorry for that crucial restriction!)
 - Bluetooth Low Energy (BLE - also called Bluetooth 4.0) capable Mac
-- RFDuino USB Shield ([RFD22121](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html) or [RFD22124](http://www.rfduino.com/product/rfd22124-pcb-usb-shield-for-rfduino/index.html))
+- RFduino USB Shield ([RFD22121](http://www.rfduino.com/product/rfd22121-usb-shield-for-rfduino/index.html) or [RFD22124](http://www.rfduino.com/product/rfd22124-pcb-usb-shield-for-rfduino/index.html))
 - CorePlot Framework ([Installation Guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application))
 
 ###How to use
 
-So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFDuino USB shield into your Mac and upload our [RFDuino sketch](software/RFDuino) to the wearable. After completing this step the last thing to do is to download the [Xcode project](software/cocoa-app), follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
+So how to use our wearable? Simply grab the 3d-printed clips and the fitting slider, mount the electronics together with a battery pack on it, which then altogether forms the so called "<b>wearable</b>" and make sure that your Mac fullfills the above requirements. Plug the RFduino USB shield into your Mac and upload our [RFduino sketch](software/RFduino) to the wearable. After completing this step the last thing to do is to download the [Xcode project](software/cocoa-app), follow the [CorePlot library installation guide](https://github.com/core-plot/core-plot/wiki/Using-Core-Plot-in-an-Application) and start the eyeDrops application and have fun exploring.<br>
 <br>
 <i>Note:</i> If you want to use the compiled and built application (.app file) please follow the steps described in section [Executable File](#executable-file).
 
 #Hardware
 
-Our Hardware consits mainly of three parts: The sensor that is detecting the blinks, the microcontroller RFDuino and our 3D-printed parts, used to hold the sensor and microcontroller in place.
+Our Hardware consits mainly of three parts: The sensor that is detecting the blinks, the microcontroller RFduino and our 3D-printed parts, used to hold the sensor and microcontroller in place.
 
 ##VCNL4020
 
@@ -79,9 +79,9 @@ The revised PCB was milled, using a Cirqoid CNC mill (http://cirqoid.com/). Both
 <br>Figure 4: populated PCB for VCNL4020.
 </p>
 
-A ribbon cable was attached to the pads, so that the PCB for the VCNL can be connected to the RFDuino PCB, which will be described in the following chapter.
+A ribbon cable was attached to the pads, so that the PCB for the VCNL can be connected to the RFduino PCB, which will be described in the following chapter.
 
-##RFDuino
+##RFduino
 
 The microcontroller used in our project is an RFduino (http://www.rfduino.com/) which features a bluetooth low energy (BLE) compatible radio transceiver. It can be programmed using the Arduino IDE.
 
@@ -257,7 +257,7 @@ As explained above, calibration is essential for having a properly working blink
 <br>Figure 20: Calibration window - On start-up.
 </p>
 
-Figure 20 shows the calibration window directly after start-up. Both eyeDrops app and wearable are now in calibration mode  where the RFDuino can be triggered to continuously send data packages containing sensor raw data and information about whether a blink was detected or not until a stop message arrives.
+Figure 20 shows the calibration window directly after start-up. Both eyeDrops app and wearable are now in calibration mode  where the RFduino can be triggered to continuously send data packages containing sensor raw data and information about whether a blink was detected or not until a stop message arrives.
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/animation.png" alt="animation.png">
