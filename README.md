@@ -7,17 +7,17 @@ In the context of the lab course "Wearable Computing Systems", which started at 
 
 Now - at the end of the project - we proudly present our results. All the single bits and pieces of our project have been documented in order to deliver high reusability for anybody who wants to work on the project after the end of the semester the lab took place. This repository is mainly devided into the two sub parts hardware and software. The hardware itself consists of two different PCBs and the fixation parts to fix the PCBs to different kinds of glasses, as well as 3D printed glasses for users who usually do not wear any. All documenting files should enable you to rebuild the hardware such that you have a working system, which will be accepted by the software parts and then run without difficulty.<br>
 <br>
-The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [the final report (TODO)](docs/readme.md). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the video (TODO)](https://www.youtube.com/watch?v=cfOa1a8hYP8).
+The developed software has been published under the open source MIT License and is running as it is. It consists of two parts, namely an RFDuino sketch and a Mac OS X Cocoa Application. The sketch for the RFDuino contains the blink detection algorithm and is able to communicate with the Cocoa App via Bluetooth Low Energy. For detailed information about the blink detection algorithm please see [here](#eye-blink-detection-algorithm). The Cocoa app's source code has both copious commenting and a [Doxygen documentation](https://benthie.github.io/wearables-praktikum/). The application's graphical user interface will be explained [below](#eyedrops-cocoa-application) and is additionally explained in a short video. [Link to the video (TODO)](https://www.youtube.com/watch?v=cfOa1a8hYP8).
 
 
 ##Table of contents
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
 - [Hardware](#hardware)
-  - [VCNL4020](#vcnl-4020)
+  - [VCNL4020](#vcnl4020)
   - [RFDuino](#rfduino)
   - [3D-printed parts](#3d-printed-parts)
-- [Eye blink detection algorithm] (#Eye blink detection algorithm)
+- [Eye blink detection algorithm](#eye-blink-detection-algorithm)
 - [eyeDrops Cocoa Application](#eyedrops-cocoa-application)
   - [Blur mode](#blur-mode)
   - [Bluetooth connection](#establishing-bluetooth-le-connection)
@@ -250,7 +250,7 @@ The system wide settings can be changed in the <i>General</i> tab in the Prefere
 
 ##Calibration
 
-As explained above, calibration is essential for having a properly working blink detection algorithm. Since every eye is unique, differing shapes, sizes and positions in the skull are what the sensor is facing. And due to those inequalities the measured distances to the eye vary from one user to the other. The implemented calibration procedure let's the user define his or her individual calibration parameters, which are then uploaded to the wearable as well as stored in a profile on the computer. More information about the calibration and the different parameters used to detect a blink is elaborately described [above](#Eye blink detection algorithm).
+As explained above, calibration is essential for having a properly working blink detection algorithm. Since every eye is unique, differing shapes, sizes and positions in the skull are what the sensor is facing. And due to those inequalities the measured distances to the eye vary from one user to the other. The implemented calibration procedure let's the user define his or her individual calibration parameters, which are then uploaded to the wearable as well as stored in a profile on the computer. More information about the calibration and the different parameters used to detect a blink is elaborately described [above](#eye-blink-detection-algorithm).
 
 <p align="center">
 <img src="https://github.com/benthie/wearables-praktikum/blob/master/docs/img/calibration_window.png" alt="calibration_window.png">
